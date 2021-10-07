@@ -1,0 +1,66 @@
+syntax = "proto3";
+
+package paperme.account.v1;
+
+option go_package = "paperme/account/v1;account";
+option java_multiple_files = true;
+option java_outer_classname = "AccountServiceProto";
+option java_package = "com.paperme.account.v1";
+
+import "paperme/account/v1/account.proto";
+
+// Handles account actions.
+service AccountService {
+  // Create an account.
+  rpc CreateAccount(CreateAccountRequest) returns (CreateAccountResponse);
+  // Login to an account.
+  rpc LoginAccount(LoginAccountRequest) returns (LoginAccountResponse);
+  // Logout an account.
+  rpc LogoutAcount(LogoutAccountRequest) returns (LogoutAccountResponse);
+  // Delete an account.
+  rpc DeleteAccount(DeleteAccountRequest) returns (DeleteAccountResponse);
+}
+
+// All fields specified as "token" are JWTs
+
+message CreateAccountRequest {
+  string email = 1;
+  string password = 2;
+  string first_name = 3;
+  repeated string middle_name = 4;
+  string last_name = 5;
+  int32 age = 6;
+  string phone = 7;
+  string gender = 8;
+}
+
+message CreateAccountResponse {
+  paperme.account.v1.Account account = 1;
+  string token = 2;
+}
+
+message LoginAccountRequest {
+  string token = 1;
+  // If no token is specified
+  string email = 2;
+  string password = 3;
+  // string phone = 4; // Email or this
+}
+
+message LoginAccountResponse {
+  paperme.account.v1.Account account = 1;
+  string token = 2;
+}
+
+message LogoutAccountRequest {
+  string token = 1;
+}
+
+message LogoutAccountResponse {}
+
+message DeleteAccountRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message DeleteAccountResponse {}

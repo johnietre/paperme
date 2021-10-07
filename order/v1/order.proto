@@ -1,0 +1,84 @@
+syntax = "proto3";
+
+package paperme.order.v1;
+
+option go_package = "paperme/order/v1;order";
+option java_multiple_files = true;
+option java_outer_classname = "OrderProto";
+option java_package = "com.paperme.order.v1";
+
+import "google/protobuf/timestamp.proto";
+
+// The side of an order.
+enum OrderSide {
+  ORDER_SIDE_INVALID = 0;
+  ORDER_SIDE_BUY = 1;
+  ORDER_SIDE_SELL = 2;
+}
+
+// The type of an order.
+enum OrderType {
+  ORDER_TYPE_INVALID = 0;
+  ORDER_TYPE_MARKET = 1;
+  ORDER_TYPE_LIMIT = 2;
+  ORDER_TYPE_STOP = 3;
+  ORDER_TYPE_STOP_LIMIT = 4;
+}
+
+// The time in force of an order.
+enum OrderTIF {
+  ORDER_TIF_INVALID = 0;
+  ORDER_TIF_DAY = 1;
+  ORDER_TIF_GTC = 2;
+}
+
+// The status of an order.
+enum OrderStatus {
+  ORDER_STATUS_INVALID = 0;
+  ORDER_STATUS_NEW = 1;
+  ORDER_STATUS_PARTIALLY_FILLED = 2;
+  ORDER_STATUS_FILLED = 3;
+  ORDER_STATUS_DONE_DOR_DAY = 4;
+  ORDER_STATUS_CANCELED = 5;
+  ORDER_STATUS_EXPIRED = 6;
+}
+
+// An order submitted by a user.
+// All monetary values (_price fields) are stored in USD with 4 significant
+// digits (e.g., $123,412.32 => 1234123200).
+message Order {
+  // The order id (created by the server)
+  string id = 1; // Not null
+  // The stock's id
+  string stock_id = 2; // Not null
+  // The stock's symbl (ticker)
+  string stock_symbol = 3; // Not null
+  // The order side (buy or sell)
+  OrderSide side = 4; // Not null
+  // The quantity placed
+  int64 qty = 5; // Not null
+  // The type of order
+  OrderType type = 6; // Not null
+  // The limit price (limit or stop limit)
+  int64 limit_price = 7;
+  // The stop price (stop or stop limit)
+  int64 stop_price = 8;
+  // The time in force for the order
+  OrderTIF time_in_force = 9; // Not null
+  // The time the order was created at (filled by the server)
+  google.protobuf.Timestamp created_at = 10; // Not null
+  // The time the order was filled at (filled by the server)
+  google.protobuf.Timestamp filled_at = 11;
+  // The time the order expired (filled by the server)
+  google.protobuf.Timestamp expired_at = 12;
+  // The time the order was canceled (filled by the server)
+  google.protobuf.Timestamp canceled_at = 13;
+  // The time the order failed (filled by the server)
+  google.protobuf.Timestamp failed_at = 14;
+  // The quanity filled
+  int64 filled_qty = 15; // Not null
+  // The average price filled at
+  int64 filled_avg_price = 16;
+  // The status of the order
+  OrderStatus status = 17; // Not null
+}
