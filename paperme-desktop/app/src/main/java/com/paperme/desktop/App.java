@@ -3,10 +3,11 @@
  */
 package com.paperme.desktop;
 
-import com.paperme.desktop.gui.login.Login;
+import com.paperme.desktop.gui.GUI;
 
 public class App {
     public static void main(String[] args) {
-      new Login().setVisible(true);
+      GUI gui = new GUI();
+      gui.run();
     }
 }
