@@ -7,7 +7,7 @@ option java_multiple_files = true;
 option java_outer_classname = "AccountProto";
 option java_package = "com.paperme.account.v1";
 
-import "google/protobuf/timestamp.proto";
+//import "google/protobuf/timestamp.proto";
 
 // A user account.
 // All monetary accounts (e.g., cash and equity) as stored in USD and with 4
@@ -26,5 +26,5 @@ message Account {
   // Total equity of the user
   int64 equity = 8;
   // When the account was created
-  google.protobuf.Timestamp created_at = 9;
+  //google.protobuf.Timestamp created_at = 9;
 }

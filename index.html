@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+  <title>Index</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div id="change-size">
+    <input id="new-height" name="new-height" type="number" min="0" placeholder="New Height"/>
+    <input id="new-width" name="new-width" type="number" min="0" placeholder="New Width"/>
+    <br>
+    <button onclick="resize()">Resize</button>
+  </div>
+  <div id="add-value">
+    <input id="new-value" name="new-value" type="number" min="0" placeholder="Value"/>
+    <br>
+    <button onclick="addValue()">Add Value</button>
+  </div>
+  <button onclick="plotRand()">Plot Random</button>
+  <br><br>
+  <svg id="my-svg" height="200" width="500">
+    <polyline id="polyid" style="fill:none;stroke:black;"/>
+  </svg>
+  <br><br>
+  <h1>2nd SVG</h1>
+  <svg height="200" width="500">
+    <polyline points="0,0 1,20 2,40 3,60 4,80 5,100" pathLength="5" style="stroke:black;" />
+  </svg>
+  
+  <script>
+    let lineVals = [];
+    const svg = document.querySelector("#my-svg");
+    const polyline = document.querySelector("#polyid");
+
+    function resize() {
+      const newHeightInput = document.querySelector("#new-height");
+      const newWidthInput = document.querySelector("#new-width");
+      svg.setAttribute("height", newHeightInput.value);
+      svg.setAttribute("width", newWidthInput.value);
+      //svg.setAttribute("viewBox", `0 0 ${newWidthInput.value} ${newHeightInput.value}`);
+      createChart();
+      newHeightInput.value = "";
+      newWidthInput.value = "";
+    }
+
+    function addValue() {
+      const newValueInput = document.querySelector("#new-value");
+      lineVals.push(Number.parseInt(newValueInput.value));
+      createChart();
+    }
+
+    function createChart() {
+      const l1 = lineVals.length - 1;
+      if (l1 == 0)
+        return;
+      const h = svg.height.baseVal.value;
+      const w = svg.width.baseVal.value;
+      let points = "";
+      for (const i in lineVals) {
+        const x = (i / l1) * w;
+        const y = h - lineVals[i];
+        points += `${x},${y} `;
+      }
+      polyline.setAttribute("points", points);
+    }
+
+    async function plotRand() {
+      lineVals.length = 0;
+      const h = svg.height.baseVal.value;
+      const w = svg.width.baseVal.value;
+      for (let i = 0; i < w / 2; i++) {
+        lineVals.push(Math.floor(Math.random() * h));
+        createChart();
+        await new Promise(r => setTimeout(r, 100));
+      }
+    }
+  </script>
+</body>
+
+</html>

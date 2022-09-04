@@ -1,0 +1,60 @@
+body {
+  font: 400 16px roboto, helvetica, arial;
+  background: #f2f2f2;
+  color: #4183d7;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+#wrapper {
+  width: 650px;
+  padding: 1em;
+  margin: 2em auto;
+  background: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.explanation {
+  margin-bottom: 3em;
+  display: inline-block;
+}
+
+.chart {
+  width: 600px;
+  padding-left: 50px;
+  height: 300px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d4e3f6;
+}
+.chart .chartMeasurements {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: left;
+  z-index: 1;
+}
+.chart .chartMeasurements .chartMeasurement {
+  width: 100%;
+  flex-grow: 1;
+  border-top: 1px solid #d4e3f6;
+}
+.chart svg {
+  position: relative;
+  z-index: 2;
+}
+.chart svg polygon {
+  box-shadow: inset 2px 0 red;
+  fill: rgba(65, 131, 215, 0.6);
+}
+
+/*# sourceMappingURL=style.css.map */

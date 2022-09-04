@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+  <title>Main</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+  <div id="app">
+    <ul v-for="(num, index) in arr">
+      <li @click="print(index)">
+        Number: {{ num }} | <button @click="del(index)">Delete</button>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    const app = {
+      data() {
+        return { arr: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] }
+      },
+      methods: {
+        del(i) {
+          this.arr.splice(i, 1);
+        },
+        print(i) {
+          console.log(i);
+        }
+      }
+    };
+    Vue.createApp(app).mount("#app");
+  </script>
+</body>
+
+</html>
