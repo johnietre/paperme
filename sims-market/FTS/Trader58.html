@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Trader 58</title>
+    <link id="stylesheet" type="text/css" href="Trader%2058_files/jquery-ui.css" rel="Stylesheet">
+
+    <link rel="stylesheet" href="Trader%2058_files/bootstrap.min.css">
+
+    <script src="Trader%2058_files/jquery.min.js"></script>
+    <script type="text/javascript" src="Trader%2058_files/jquery-ui.min.js"></script>
+    <script src="Trader%2058_files/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="Trader%2058_files/examples.css">
+
+    <script type="text/javascript" src="Trader%2058_files/jsConstant.js"></script>
+    <script type="text/javascript" src="Trader%2058_files/JavaScript0.js"></script>
+    <script type="text/javascript" src="Trader%2058_files/JavaScript1.js"></script>
+    <script type="text/javascript" src="Trader%2058_files/jsMontage.js"></script>
+    <script type="text/javascript" src="Trader%2058_files/loader_002.js"></script>  <!--charting-->
+    <script type="text/javascript" src="Trader%2058_files/jsGoogle.js"></script><script type="text/javascript" charset="UTF-8" src="Trader%2058_files/loader.js"></script>
+    <script type="text/javascript" src="Trader%2058_files/jsBlackScholes.js"></script>
+    <script type="text/javascript" src="Trader%2058_files/jsSupport.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="Trader%2058_files/StyleSheet1.css">
+
+    <link href="Trader%2058_files/css.css" rel="stylesheet" type="text/css">
+
+<link id="load-css-0" rel="stylesheet" type="text/css" href="Trader%2058_files/tooltip.css"><link id="load-css-1" rel="stylesheet" type="text/css" href="Trader%2058_files/util.css"><script type="text/javascript" charset="UTF-8" src="Trader%2058_files/jsapi_compiled_default_module.js"></script><script type="text/javascript" charset="UTF-8" src="Trader%2058_files/jsapi_compiled_graphics_module.js"></script><script type="text/javascript" charset="UTF-8" src="Trader%2058_files/jsapi_compiled_ui_module.js"></script><script type="text/javascript" charset="UTF-8" src="Trader%2058_files/jsapi_compiled_corechart_module.js"></script></head>
+<body class="body">
+    <div id="tab-top" style="min-width:800px;clear:left">
+
+        <div id="lblCash" class="cashLabel">Cash: 200,151.61</div>
+        <div id="lblIntRate" class="timeLabel">Interest Rate: 0.16</div>
+        <div id="lblTime" class="timeLabel" style="color: rgb(0, 255, 0);">Time: 103</div>
+        <div id="lblTrial" class="timeLabel">Trial: 3</div>
+        <div id="lblPeriod" class="timeLabel">Period: 3</div>
+
+        <span id="traderName" class="timeLabel"> Case B02 Trader 58</span>
+        <span id="statusLabel" class="timeLabel">Connected</span>
+    </div><!-- end of tab-top-->
+    <div id="myTabs" style="position: absolute; top: 60px; bottom: 20px; padding: 0; margin: 0;height:100%;
+        width: 100%; overflow: auto; font-family:'Open Sans'" class="ui-tabs ui-corner-all ui-widget ui-widget-content">
+        <ul role="tablist" class="ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header">
+            <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab" aria-controls="tab-1" aria-labelledby="ui-id-1" aria-selected="false" aria-expanded="false"><a href="#tab-1" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-1">Login</a></li>
+            <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab" aria-controls="tab-2" aria-labelledby="ui-id-2" aria-selected="false" aria-expanded="false"><a href="#tab-2" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-2">Panel Interface</a></li>
+            <li role="tab" tabindex="0" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab ui-tabs-active ui-state-active" aria-controls="tab-3" aria-labelledby="ui-id-3" aria-selected="true" aria-expanded="true"><a href="#tab-3" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-3">Montage Interface</a></li>
+        </ul>
+        <div id="tab-1" aria-labelledby="ui-id-1" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content" aria-hidden="true" style="display: none;">
+            <div>
+                <div class="inputlabel" style="color:yellow">Connect to Demo to practice with the FTS Interactive Market" </div>
+                <input id="cmdTrdConnectDemo" type="button" value="Connect to B02 Demo" class="myButton">
+                <p>
+                </p><div class="inputlabel" style="color:yellow">To connect to your instructor's case, enter the information below and click Connect</div>
+                <br>
+                <div class="inputlabel">Your Email Address</div>
+                <input id="txtTrdName" type="text" class="input">
+                <br>
+                <div class="inputlabel">Moderators Email Address</div>
+                <input id="txtMyModName" type="text" class="input">
+                <p>
+                </p><div class="inputlabel">&nbsp;</div>
+                <input id="cmdTrdConnect" type="button" value="Connect" class="myButton">
+                <br>
+                <p></p>
+                <div class="inputlabel" style="color:yellow"><a href="http://www.ftsmodules.com/public/demos/ftscases/TftsCases.htm" target="_blank">Link to FTS Case Descriptions  <span class="glyphicon glyphicon-new-window"></span></a></div>
+                <img src="Trader%2058_files/ftsheader.jpg" style="position:absolute;bottom:0;left:25%;">
+                <br>
+            </div>
+
+        </div> <!-- end of tab-1-->
+        <div id="tab-2" style="min-width: 800px; clear: left; display: none;" aria-labelledby="ui-id-2" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content" aria-hidden="true">
+            <div id="accordTRD" style="margin:0;padding:0;clear:left">
+        <div id="sec1" class="secDiv" style="width: 20%;">
+            <div class="secLabel">
+                <div id="secName1" style="text-align:center;clear:both;font-size:18px;">Cp Bnd</div>
+            </div>
+            <div class="secHalf">
+                <div class="secQuoteLbl"><span class="secQuoteColor">Bid</span>/<span class="secQtyColor">Qty</span></div>
+                <div id="bestBid1" class="secQuote">94.70</div>
+                <div id="bestBidQty1" class="secQuoteQty">10000</div>
+                <img id="imBidUp1" src="Trader%2058_files/Arrow2%20Up.ico" class="imgTrade" title="Raise Bid" onclick="raiseBid(1)">
+                <img id="imHitBid1" src="Trader%2058_files/Target_Magenta.ico" class="imgTrade" title="Hit Bid" onclick="hitBid(1)">
+            </div>
+            <div class="secHalf">
+                <div class="secQuoteLbl"><span class="secQuoteColor">Ask</span>/<span class="secQtyColor">Qty</span></div>
+                <div id="bestAsk1" class="secQuote">94.95</div>
+                <div id="bestAskQty1" class="secQuoteQty">9360</div>
+                <img id="imAskDown1" src="Trader%2058_files/Arrow2%20Down.ico" class="imgTrade" title="Lower Ask" onclick="lowerAsk(1)">
+                <img id="imHitAsk1" src="Trader%2058_files/Target_blue.ico" class="imgTrade" title="Hit Ask" onclick="hitAsk(1)">
+            </div>
+            <div class="secHalf">
+                <div id="lblLastPayoff1" class="secQuoteLbl">Last</div>
+                <div id="lastPayoff1" class="secQuote" style="color: rgb(0, 255, 0);">94.95↑</div>
+            </div>
+            <div class="secHalf">
+                <div id="lblPosition1" class="secQuoteLbl">Position</div>
+                <div id="position1" class="secQuote">-400</div>
+            </div>
+            <button class="accordion">Market Order Options</button>
+            <div class="panel">
+                <div class="secThird">
+                    <div class="priceQtyLabel">Quantity</div>
+                    <input type="text" value="10" class="priceQty" id="txtQtyMkt1">
+                </div>
+                <div class="secTwoThirds">
+                    <form>
+                        <input type="radio" id="rdTakeAll1" name="mktQty1" style="vertical-align:middle; text-align:left;">
+                        <label for="rdTakeAll1" class="priceQtyLabel">Trade All</label><br>
+                        <input type="radio" id="rdTakeQty1" checked="checked" name="mktQty1" style="vertical-align:middle; text-align:left;">
+                        <label for="rdTakeQty1" class="priceQtyLabel">Trade Quantity</label>
+                    </form>
+                </div>
+            </div>
+            <button class="accordion">Information, Limit Orders</button>
+            <div class="panel">
+                <div id="secBottom1">
+                    <!--class='divHidden'>-->
+                    <div id="lblInfo1" class="labelInfoMsg">&nbsp;</div>
+                    <div id="tradeInput1" class="secHalf">
+                        <div class="priceQtyLabel">Price</div>
+                        <input type="text" class="priceQty" id="txtPrice1">
+                        <div class="priceQtyLabel">Quantity</div>
+                        <input type="text" class="priceQty" id="txtQty1">
+                    </div>
+                    <div id="tradeButton1" class="secHalf" style="height: 0px;">
+                        <input id="btnBid1" type="button" value="Submit Bid" class="myTradeButton" style="font-size:small;" onclick="submitBid(1)">
+                        <input id="btnAsk1" type="button" value="Submit Ask" class="myTradeButton" style="font-size:small;" onclick="submitAsk(1)">
+                        <input id="btnClrBid1" type="button" value="Clear Bids" class="myTradeButton" style="font-size:small;" onclick="clearBids(1)">
+                        <input id="btnClrAsk1" type="button" value="Clear Asks" class="myTradeButton" style="font-size:small;" onclick="clearAsks(1)">
+                    </div>
+                </div><!-- end of secBottom-->
+            </div>
+            <button class="accordion">Order Books</button>
+            <div class="panel">
+                <div id="secBottomBook1" style="display:block; height:100px;width:100%;overflow:hidden;">
+                    <div class="secHalf">
+                        <table id="bidBook1" class="htnl_tbl">
+                            <thead>
+                                <tr><td>Bid</td><td>BidQ</td></tr>
+                            </thead>
+                            <tbody><tr><td>94.70</td><td>10000</td></tr><tr><td>94.68</td><td>2000</td></tr><tr><td>94.60</td><td>100</td></tr><tr><td>94.50</td><td>120</td></tr><tr><td>94.40</td><td>460</td></tr><tr><td>94.40</td><td>200</td></tr><tr><td>94.30</td><td>880</td></tr><tr><td>94.20</td><td>400</td></tr><tr><td>94.10</td><td>2000</td></tr><tr><td>94.00</td><td>19800</td></tr></tbody>
+                        </table>
+                    </div>
+                    <div class="secHalf">
+                        <table id="askBook1" class="htnl_tbl">
+                            <thead><tr><td>Ask</td><td>AskQ</td></tr></thead>
+                            <tbody><tr><td>94.95</td><td>9360</td></tr><tr><td>94.95</td><td>10000</td></tr><tr><td>94.98</td><td>9300</td></tr><tr><td>95.00</td><td>6839</td></tr><tr><td>95.00</td><td>10000</td></tr><tr><td>95.00</td><td>800</td></tr><tr><td>100.00</td><td>10</td></tr><tr><td>100.00</td><td>10</td></tr></tbody>
+                        </table>
+                    </div>
+                </div><!-- end of secBottomBook-->
+
+            </div>
+            <button class="accordion">Chart</button>
+            <div class="panel">
+                <div id="chart_div1" style="width: 100%; height: 100px;"><div style="position: relative;"><div style="position: relative; width: 400px; height: 95px;" dir="ltr"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;" aria-label="A chart."><svg width="400" height="95" style="overflow: hidden;" aria-label="A chart."><defs id="_ABSTRACT_RENDERER_ID_54"><clipPath id="_ABSTRACT_RENDERER_ID_55"><rect x="20" y="5" width="320" height="76"></rect></clipPath></defs><g><rect x="20" y="5" width="320" height="76" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(http://ftswebtrader.com/#_ABSTRACT_RENDERER_ID_55)"><g><rect x="20" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="153" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="286" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="86" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="219" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="352" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="20" y="80" width="320" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="20" y="5" width="320" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="20" y="95" width="320" height="1" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="20" y="65" width="320" height="1" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="20" y="35" width="320" height="1" stroke="none" stroke-width="0" fill="#ebebeb"></rect></g><g><rect x="20" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#333333"></rect></g><g><path d="M164.04999999999998,35.5C164.04999999999998,35.5,168.9236111111554,35.5,169.36666666666667,35.5C169.80972222217792,35.5,170.25277777782208,32.50000000000182,170.69583333333333,35.5C171.13888888884458,38.5,172.025,53.99999999949978,172.025,53.49999999999818C172.025,53.00000000050022,172.025,50.5,172.025,50.5C172.025,50.5,172.025,50.5,172.025,50.5C172.025,50.5,172.025,50.5,172.025,50.5C172.025,50.5,172.025,50.5,172.025,50.5C172.025,50.5,173.35416666666666,50.5,173.35416666666666,50.5C173.35416666666666,50.5,173.35416666666666,50.5,173.35416666666666,50.5C173.35416666666666,50.5,176.89861111115542,50.5,177.34166666666667,50.5C177.78472222217792,50.5,178.67083333333332,50.5,178.67083333333332,50.5C178.67083333333332,50.5,178.67083333333332,50.5,178.67083333333332,50.5C178.67083333333332,50.5,178.67083333333332,50.5,178.67083333333332,50.5C178.67083333333332,50.5,180,50.5,180,50.5C180,50.5,180,50.5,180,50.5C180,50.5,181.32916666666665,50.5,181.32916666666665,50.5C181.32916666666665,50.5,181.32916666666665,50.5,181.32916666666665,50.5C181.32916666666665,50.5,181.32916666666665,50.5,181.32916666666665,50.5C181.32916666666665,50.5,182.65833333333333,50.5,182.65833333333333,50.5C182.65833333333333,50.5,182.65833333333333,50.5,182.65833333333333,50.5C182.65833333333333,50.5,182.65833333333333,50.5,182.65833333333333,50.5C182.65833333333333,50.5,182.65833333333333,50.5,182.65833333333333,50.5C182.65833333333333,50.5,183.54444444448873,50.5,183.98749999999998,50.5C184.43055555551126,50.5,184.8736111111554,50.5,185.31666666666666,50.5C185.7597222221779,50.5,186.20277777782206,50.5,186.64583333333331,50.5C187.0888888888446,50.5,187.53194444448874,50.5,187.975,50.5C188.41805555551124,50.5,191.9625,50.5,193.29166666666666,50.5C194.62083333333334,50.5,196.8361111111554,50.00000000050022,197.27916666666667,50.5C197.72222222217792,50.99999999949978,198.60833333333332,53.49999999999818,198.60833333333332,53.49999999999818C198.60833333333332,53.49999999999818,198.60833333333332,53.49999999999818,198.60833333333332,53.49999999999818C198.60833333333332,53.49999999999818,198.60833333333332,53.49999999999818,198.60833333333332,53.49999999999818C198.60833333333332,53.49999999999818,199.9375,50.5,199.9375,50.5" stroke="#ff0000" stroke-width="2" fill-opacity="1" fill="none"></path><path d="M164.04999999999998,38.5C164.04999999999998,38.5,168.9236111111554,38.5,169.36666666666667,38.5C169.80972222217792,38.5,170.25277777782208,38.5,170.69583333333333,38.5C171.13888888884458,38.5,172.025,38.5,172.025,38.5C172.025,38.5,172.025,38.5,172.025,38.5C172.025,38.5,172.025,38.5,172.025,38.5C172.025,38.5,172.025,38.5,172.025,38.5C172.025,38.5,172.025,38.5,172.025,38.5C172.025,38.5,173.35416666666666,38.5,173.35416666666666,38.5C173.35416666666666,38.5,173.35416666666666,38.5,173.35416666666666,38.5C173.35416666666666,38.5,176.89861111115542,38.5,177.34166666666667,38.5C177.78472222217792,38.5,178.67083333333332,38.5,178.67083333333332,38.5C178.67083333333332,38.5,178.67083333333332,38.5,178.67083333333332,38.5C178.67083333333332,38.5,178.67083333333332,38.5,178.67083333333332,38.5C178.67083333333332,38.5,180,38.5,180,38.5C180,38.5,180,38.5,180,38.5C180,38.5,181.32916666666665,38.5,181.32916666666665,38.5C181.32916666666665,38.5,181.32916666666665,38.5,181.32916666666665,38.5C181.32916666666665,38.5,181.32916666666665,38.5,181.32916666666665,38.5C181.32916666666665,38.5,182.65833333333333,38.5,182.65833333333333,38.5C182.65833333333333,38.5,182.65833333333333,38.5,182.65833333333333,38.5C182.65833333333333,38.5,182.65833333333333,38.5,182.65833333333333,38.5C182.65833333333333,38.5,182.65833333333333,38.5,182.65833333333333,38.5C182.65833333333333,38.5,183.54444444448873,38.5,183.98749999999998,38.5C184.43055555551126,38.5,184.8736111111554,41.00000000050022,185.31666666666666,38.5C185.7597222221779,35.99999999949978,186.20277777782206,26.000000000500222,186.64583333333331,23.5C187.0888888888446,20.999999999499778,187.53194444448874,23.5,187.975,23.5C188.41805555551124,23.5,191.9625,23.5,193.29166666666666,23.5C194.62083333333334,23.5,196.8361111111554,23.5,197.27916666666667,23.5C197.72222222217792,23.5,198.60833333333332,23.5,198.60833333333332,23.5C198.60833333333332,23.5,198.60833333333332,23.5,198.60833333333332,23.5C198.60833333333332,23.5,198.60833333333332,23.5,198.60833333333332,23.5C198.60833333333332,23.5,199.9375,23.5,199.9375,23.5" stroke="#00ffff" stroke-width="2" fill-opacity="1" fill="none"></path><path d="M164.04999999999998,23.5C164.04999999999998,23.5,168.9236111111554,23.5,169.36666666666667,23.5C169.80972222217792,23.5,170.25277777782208,23.5,170.69583333333333,23.5C171.13888888884458,23.5,172.025,23.5,172.025,23.5C172.025,23.5,172.025,23.5,172.025,23.5C172.025,23.5,172.025,23.5,172.025,23.5C172.025,23.5,172.025,23.5,172.025,23.5C172.025,23.5,172.025,23.5,172.025,23.5C172.025,23.5,173.35416666666666,50.5,173.35416666666666,50.5C173.35416666666666,50.5,173.35416666666666,50.5,173.35416666666666,50.5C173.35416666666666,50.5,176.89861111115542,50.5,177.34166666666667,50.5C177.78472222217792,50.5,178.67083333333332,50.5,178.67083333333332,50.5C178.67083333333332,50.5,178.67083333333332,50.5,178.67083333333332,50.5C178.67083333333332,50.5,178.67083333333332,40.49999999949978,178.67083333333332,38.5C178.67083333333332,36.50000000050022,180,52.49999999949978,180,50.5C180,48.50000000050022,180,40.49999999949978,180,38.5C180,36.50000000050022,181.32916666666665,50.5,181.32916666666665,50.5C181.32916666666665,50.5,181.32916666666665,50.5,181.32916666666665,50.5C181.32916666666665,50.5,181.32916666666665,50.5,181.32916666666665,50.5C181.32916666666665,50.5,182.65833333333333,38.5,182.65833333333333,38.5C182.65833333333333,38.5,182.65833333333333,38.5,182.65833333333333,38.5C182.65833333333333,38.5,182.65833333333333,38.5,182.65833333333333,38.5C182.65833333333333,38.5,182.65833333333333,48.50000000050022,182.65833333333333,50.5C182.65833333333333,52.49999999949978,183.54444444448873,38.5,183.98749999999998,38.5C184.43055555551126,38.5,184.8736111111554,48.50000000050022,185.31666666666666,50.5C185.7597222221779,52.49999999949978,186.20277777782206,50.5,186.64583333333331,50.5C187.0888888888446,50.5,187.53194444448874,51.625,187.975,50.5C188.41805555551124,49.375,191.9625,22.375,193.29166666666666,23.5C194.62083333333334,24.625,196.8361111111554,55.25000000050022,197.27916666666667,50.5C197.72222222217792,45.7499999995016,198.60833333333332,13,198.60833333333332,13C198.60833333333332,13,198.60833333333332,13,198.60833333333332,13C198.60833333333332,13,198.60833333333332,13,198.60833333333332,13C198.60833333333332,13,199.9375,13,199.9375,13" stroke="#ffff00" stroke-width="2" fill-opacity="1" fill="none"></path></g></g><g></g><g><g><text text-anchor="middle" x="20.5" y="91.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#ffffff">0</text></g><g><text text-anchor="middle" x="153.4167" y="91.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#ffffff">100</text></g><g><text text-anchor="middle" x="286.3333" y="91.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#ffffff">200</text></g></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Time</th><th>Bid</th><th>Ask</th><th>Last</th></tr></thead><tbody><tr><td>108</td><td>94.8</td><td>94.78</td><td>94.88</td></tr><tr><td>112</td><td>94.8</td><td>94.78</td><td>94.88</td></tr><tr><td>113</td><td>94.8</td><td>94.78</td><td>94.88</td></tr><tr><td>114</td><td>94.68</td><td>94.78</td><td>94.88</td></tr><tr><td>114</td><td>94.7</td><td>94.78</td><td>94.88</td></tr><tr><td>114</td><td>94.7</td><td>94.78</td><td>94.88</td></tr><tr><td>114</td><td>94.7</td><td>94.78</td><td>94.88</td></tr><tr><td>114</td><td>94.7</td><td>94.78</td><td>94.88</td></tr><tr><td>115</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>115</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>118</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>119</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>119</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>119</td><td>94.7</td><td>94.78</td><td>94.78</td></tr><tr><td>120</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>120</td><td>94.7</td><td>94.78</td><td>94.78</td></tr><tr><td>121</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>121</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>121</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>122</td><td>94.7</td><td>94.78</td><td>94.78</td></tr><tr><td>122</td><td>94.7</td><td>94.78</td><td>94.78</td></tr><tr><td>122</td><td>94.7</td><td>94.78</td><td>94.78</td></tr><tr><td>122</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>123</td><td>94.7</td><td>94.78</td><td>94.78</td></tr><tr><td>124</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>125</td><td>94.7</td><td>94.88</td><td>94.7</td></tr><tr><td>126</td><td>94.7</td><td>94.88</td><td>94.7</td></tr><tr><td>130</td><td>94.7</td><td>94.88</td><td>94.88</td></tr><tr><td>133</td><td>94.7</td><td>94.88</td><td>94.7</td></tr><tr><td>134</td><td>94.68</td><td>94.88</td><td>94.95</td></tr><tr><td>134</td><td>94.68</td><td>94.88</td><td>94.95</td></tr><tr><td>134</td><td>94.68</td><td>94.88</td><td>94.95</td></tr><tr><td>135</td><td>94.7</td><td>94.88</td><td>94.95</td></tr></tbody></table></div></div></div><div style="display: none; position: absolute; top: 105px; left: 410px; white-space: nowrap; font-family: Arial; font-size: 10px;" aria-hidden="true">200</div><div></div></div></div>
+            </div>
+        </div><!-- end of secDiv-->
+    
+        <div id="sec2" class="secDiv" style="width: 20%;">
+            <div class="secLabel">
+                <div id="secName2" style="text-align:center;clear:both;font-size:18px;">Zero 1</div>
+            </div>
+            <div class="secHalf">
+                <div class="secQuoteLbl"><span class="secQuoteColor">Bid</span>/<span class="secQtyColor">Qty</span></div>
+                <div id="bestBid2" class="secQuote">&nbsp;</div>
+                <div id="bestBidQty2" class="secQuoteQty">&nbsp;</div>
+                <img id="imBidUp2" src="Trader%2058_files/Arrow2%20Up.ico" class="imgTrade" title="Raise Bid" onclick="raiseBid(2)">
+                <img id="imHitBid2" src="Trader%2058_files/Target_Magenta.ico" class="imgTrade" title="Hit Bid" onclick="hitBid(2)">
+            </div>
+            <div class="secHalf">
+                <div class="secQuoteLbl"><span class="secQuoteColor">Ask</span>/<span class="secQtyColor">Qty</span></div>
+                <div id="bestAsk2" class="secQuote">&nbsp;</div>
+                <div id="bestAskQty2" class="secQuoteQty">&nbsp;</div>
+                <img id="imAskDown2" src="Trader%2058_files/Arrow2%20Down.ico" class="imgTrade" title="Lower Ask" onclick="lowerAsk(2)">
+                <img id="imHitAsk2" src="Trader%2058_files/Target_blue.ico" class="imgTrade" title="Hit Ask" onclick="hitAsk(2)">
+            </div>
+            <div class="secHalf">
+                <div id="lblLastPayoff2" class="secQuoteLbl">Last</div>
+                <div id="lastPayoff2" class="secQuote">&nbsp;</div>
+            </div>
+            <div class="secHalf">
+                <div id="lblPosition2" class="secQuoteLbl">Position</div>
+                <div id="position2" class="secQuote">0</div>
+            </div>
+            <button class="accordion">Market Order Options</button>
+            <div class="panel">
+                <div class="secThird">
+                    <div class="priceQtyLabel">Quantity</div>
+                    <input type="text" value="10" class="priceQty" id="txtQtyMkt2">
+                </div>
+                <div class="secTwoThirds">
+                    <form>
+                        <input type="radio" id="rdTakeAll2" name="mktQty2" style="vertical-align:middle; text-align:left;">
+                        <label for="rdTakeAll2" class="priceQtyLabel">Trade All</label><br>
+                        <input type="radio" id="rdTakeQty2" checked="checked" name="mktQty2" style="vertical-align:middle; text-align:left;">
+                        <label for="rdTakeQty2" class="priceQtyLabel">Trade Quantity</label>
+                    </form>
+                </div>
+            </div>
+            <button class="accordion">Information, Limit Orders</button>
+            <div class="panel">
+                <div id="secBottom2">
+                    <!--class='divHidden'>-->
+                    <div id="lblInfo2" class="labelInfoMsg">&nbsp;</div>
+                    <div id="tradeInput2" class="secHalf">
+                        <div class="priceQtyLabel">Price</div>
+                        <input type="text" class="priceQty" id="txtPrice2">
+                        <div class="priceQtyLabel">Quantity</div>
+                        <input type="text" class="priceQty" id="txtQty2">
+                    </div>
+                    <div id="tradeButton2" class="secHalf" style="height: 0px;">
+                        <input id="btnBid2" type="button" value="Submit Bid" class="myTradeButton" style="font-size:small;" onclick="submitBid(2)">
+                        <input id="btnAsk2" type="button" value="Submit Ask" class="myTradeButton" style="font-size:small;" onclick="submitAsk(2)">
+                        <input id="btnClrBid2" type="button" value="Clear Bids" class="myTradeButton" style="font-size:small;" onclick="clearBids(2)">
+                        <input id="btnClrAsk2" type="button" value="Clear Asks" class="myTradeButton" style="font-size:small;" onclick="clearAsks(2)">
+                    </div>
+                </div><!-- end of secBottom-->
+            </div>
+            <button class="accordion">Order Books</button>
+            <div class="panel">
+                <div id="secBottomBook2" style="display:block; height:100px;width:100%;overflow:hidden;">
+                    <div class="secHalf">
+                        <table id="bidBook2" class="htnl_tbl">
+                            <thead>
+                                <tr><td>Bid</td><td>BidQ</td></tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="secHalf">
+                        <table id="askBook2" class="htnl_tbl">
+                            <thead><tr><td>Ask</td><td>AskQ</td></tr></thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div><!-- end of secBottomBook-->
+
+            </div>
+            <button class="accordion">Chart</button>
+            <div class="panel">
+                <div id="chart_div2" style="width: 100%; height: 100px;"><div style="position: relative;"><div style="position: relative; width: 400px; height: 95px;" dir="ltr"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;" aria-label="A chart."><svg width="400" height="95" style="overflow: hidden;" aria-label="A chart."><defs id="_ABSTRACT_RENDERER_ID_2"><clipPath id="_ABSTRACT_RENDERER_ID_3"><rect x="20" y="5" width="320" height="76"></rect></clipPath></defs><g><rect x="20" y="5" width="320" height="76" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(http://ftswebtrader.com/#_ABSTRACT_RENDERER_ID_3)"><g><rect x="20" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="153" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="286" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="86" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="219" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="352" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="20" y="80" width="320" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="20" y="5" width="320" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="20" y="43" width="320" height="1" stroke="none" stroke-width="0" fill="#ebebeb"></rect></g><g><rect x="20" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#333333"></rect><rect x="20" y="80" width="320" height="1" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="middle" x="20.5" y="91.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#ffffff">0</text></g><g><text text-anchor="middle" x="153.4167" y="91.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#ffffff">100</text></g><g><text text-anchor="middle" x="286.3333" y="91.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#ffffff">200</text></g></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Time</th><th>Bid</th><th>Ask</th><th>Last</th></tr></thead><tbody></tbody></table></div></div></div><div style="display: none; position: absolute; top: 105px; left: 410px; white-space: nowrap; font-family: Arial; font-size: 10px;" aria-hidden="true">...</div><div></div></div></div>
+            </div>
+        </div><!-- end of secDiv-->
+    
+        <div id="sec3" class="secDiv" style="width: 20%;">
+            <div class="secLabel">
+                <div id="secName3" style="text-align:center;clear:both;font-size:18px;">Zero 2</div>
+            </div>
+            <div class="secHalf">
+                <div class="secQuoteLbl"><span class="secQuoteColor">Bid</span>/<span class="secQtyColor">Qty</span></div>
+                <div id="bestBid3" class="secQuote">&nbsp;</div>
+                <div id="bestBidQty3" class="secQuoteQty">&nbsp;</div>
+                <img id="imBidUp3" src="Trader%2058_files/Arrow2%20Up.ico" class="imgTrade" title="Raise Bid" onclick="raiseBid(3)">
+                <img id="imHitBid3" src="Trader%2058_files/Target_Magenta.ico" class="imgTrade" title="Hit Bid" onclick="hitBid(3)">
+            </div>
+            <div class="secHalf">
+                <div class="secQuoteLbl"><span class="secQuoteColor">Ask</span>/<span class="secQtyColor">Qty</span></div>
+                <div id="bestAsk3" class="secQuote">&nbsp;</div>
+                <div id="bestAskQty3" class="secQuoteQty">&nbsp;</div>
+                <img id="imAskDown3" src="Trader%2058_files/Arrow2%20Down.ico" class="imgTrade" title="Lower Ask" onclick="lowerAsk(3)">
+                <img id="imHitAsk3" src="Trader%2058_files/Target_blue.ico" class="imgTrade" title="Hit Ask" onclick="hitAsk(3)">
+            </div>
+            <div class="secHalf">
+                <div id="lblLastPayoff3" class="secQuoteLbl">Last</div>
+                <div id="lastPayoff3" class="secQuote">&nbsp;</div>
+            </div>
+            <div class="secHalf">
+                <div id="lblPosition3" class="secQuoteLbl">Position</div>
+                <div id="position3" class="secQuote">430</div>
+            </div>
+            <button class="accordion">Market Order Options</button>
+            <div class="panel">
+                <div class="secThird">
+                    <div class="priceQtyLabel">Quantity</div>
+                    <input type="text" value="10" class="priceQty" id="txtQtyMkt3">
+                </div>
+                <div class="secTwoThirds">
+                    <form>
+                        <input type="radio" id="rdTakeAll3" name="mktQty3" style="vertical-align:middle; text-align:left;">
+                        <label for="rdTakeAll3" class="priceQtyLabel">Trade All</label><br>
+                        <input type="radio" id="rdTakeQty3" checked="checked" name="mktQty3" style="vertical-align:middle; text-align:left;">
+                        <label for="rdTakeQty3" class="priceQtyLabel">Trade Quantity</label>
+                    </form>
+                </div>
+            </div>
+            <button class="accordion">Information, Limit Orders</button>
+            <div class="panel">
+                <div id="secBottom3">
+                    <!--class='divHidden'>-->
+                    <div id="lblInfo3" class="labelInfoMsg">&nbsp;</div>
+                    <div id="tradeInput3" class="secHalf">
+                        <div class="priceQtyLabel">Price</div>
+                        <input type="text" class="priceQty" id="txtPrice3">
+                        <div class="priceQtyLabel">Quantity</div>
+                        <input type="text" class="priceQty" id="txtQty3">
+                    </div>
+                    <div id="tradeButton3" class="secHalf" style="height: 0px;">
+                        <input id="btnBid3" type="button" value="Submit Bid" class="myTradeButton" style="font-size:small;" onclick="submitBid(3)">
+                        <input id="btnAsk3" type="button" value="Submit Ask" class="myTradeButton" style="font-size:small;" onclick="submitAsk(3)">
+                        <input id="btnClrBid3" type="button" value="Clear Bids" class="myTradeButton" style="font-size:small;" onclick="clearBids(3)">
+                        <input id="btnClrAsk3" type="button" value="Clear Asks" class="myTradeButton" style="font-size:small;" onclick="clearAsks(3)">
+                    </div>
+                </div><!-- end of secBottom-->
+            </div>
+            <button class="accordion">Order Books</button>
+            <div class="panel">
+                <div id="secBottomBook3" style="display:block; height:100px;width:100%;overflow:hidden;">
+                    <div class="secHalf">
+                        <table id="bidBook3" class="htnl_tbl">
+                            <thead>
+                                <tr><td>Bid</td><td>BidQ</td></tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="secHalf">
+                        <table id="askBook3" class="htnl_tbl">
+                            <thead><tr><td>Ask</td><td>AskQ</td></tr></thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div><!-- end of secBottomBook-->
+
+            </div>
+            <button class="accordion">Chart</button>
+            <div class="panel">
+                <div id="chart_div3" style="width: 100%; height: 100px;"><div style="position: relative;"><div style="position: relative; width: 400px; height: 95px;" dir="ltr"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;" aria-label="A chart."><svg width="400" height="95" style="overflow: hidden;" aria-label="A chart."><defs id="_ABSTRACT_RENDERER_ID_4"><clipPath id="_ABSTRACT_RENDERER_ID_5"><rect x="20" y="5" width="320" height="76"></rect></clipPath></defs><g><rect x="20" y="5" width="320" height="76" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(http://ftswebtrader.com/#_ABSTRACT_RENDERER_ID_5)"><g><rect x="20" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="153" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="286" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="86" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="219" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="352" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="20" y="80" width="320" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="20" y="5" width="320" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="20" y="43" width="320" height="1" stroke="none" stroke-width="0" fill="#ebebeb"></rect></g><g><rect x="20" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#333333"></rect><rect x="20" y="80" width="320" height="1" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="middle" x="20.5" y="91.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#ffffff">0</text></g><g><text text-anchor="middle" x="153.4167" y="91.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#ffffff">100</text></g><g><text text-anchor="middle" x="286.3333" y="91.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#ffffff">200</text></g></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Time</th><th>Bid</th><th>Ask</th><th>Last</th></tr></thead><tbody></tbody></table></div></div></div><div style="display: none; position: absolute; top: 105px; left: 410px; white-space: nowrap; font-family: Arial; font-size: 10px;" aria-hidden="true">...</div><div></div></div></div>
+            </div>
+        </div><!-- end of secDiv-->
+    
+        <div id="sec4" class="secDiv" style="width: 20%;">
+            <div class="secLabel">
+                <div id="secName4" style="text-align:center;clear:both;font-size:18px;">Zero 3</div>
+            </div>
+            <div class="secHalf">
+                <div class="secQuoteLbl"><span class="secQuoteColor">Bid</span>/<span class="secQtyColor">Qty</span></div>
+                <div id="bestBid4" class="secQuote">86.15</div>
+                <div id="bestBidQty4" class="secQuoteQty">100</div>
+                <img id="imBidUp4" src="Trader%2058_files/Arrow2%20Up.ico" class="imgTrade" title="Raise Bid" onclick="raiseBid(4)">
+                <img id="imHitBid4" src="Trader%2058_files/Target_Magenta.ico" class="imgTrade" title="Hit Bid" onclick="hitBid(4)">
+            </div>
+            <div class="secHalf">
+                <div class="secQuoteLbl"><span class="secQuoteColor">Ask</span>/<span class="secQtyColor">Qty</span></div>
+                <div id="bestAsk4" class="secQuote">86.24</div>
+                <div id="bestAskQty4" class="secQuoteQty">8999</div>
+                <img id="imAskDown4" src="Trader%2058_files/Arrow2%20Down.ico" class="imgTrade" title="Lower Ask" onclick="lowerAsk(4)">
+                <img id="imHitAsk4" src="Trader%2058_files/Target_blue.ico" class="imgTrade" title="Hit Ask" onclick="hitAsk(4)">
+            </div>
+            <div class="secHalf">
+                <div id="lblLastPayoff4" class="secQuoteLbl">Last</div>
+                <div id="lastPayoff4" class="secQuote" style="color: rgb(0, 255, 0);">86.24↑</div>
+            </div>
+            <div class="secHalf">
+                <div id="lblPosition4" class="secQuoteLbl">Position</div>
+                <div id="position4" class="secQuote">0</div>
+            </div>
+            <button class="accordion">Market Order Options</button>
+            <div class="panel">
+                <div class="secThird">
+                    <div class="priceQtyLabel">Quantity</div>
+                    <input type="text" value="10" class="priceQty" id="txtQtyMkt4">
+                </div>
+                <div class="secTwoThirds">
+                    <form>
+                        <input type="radio" id="rdTakeAll4" name="mktQty4" style="vertical-align:middle; text-align:left;">
+                        <label for="rdTakeAll4" class="priceQtyLabel">Trade All</label><br>
+                        <input type="radio" id="rdTakeQty4" checked="checked" name="mktQty4" style="vertical-align:middle; text-align:left;">
+                        <label for="rdTakeQty4" class="priceQtyLabel">Trade Quantity</label>
+                    </form>
+                </div>
+            </div>
+            <button class="accordion">Information, Limit Orders</button>
+            <div class="panel">
+                <div id="secBottom4">
+                    <!--class='divHidden'>-->
+                    <div id="lblInfo4" class="labelInfoMsg">&nbsp;</div>
+                    <div id="tradeInput4" class="secHalf">
+                        <div class="priceQtyLabel">Price</div>
+                        <input type="text" class="priceQty" id="txtPrice4">
+                        <div class="priceQtyLabel">Quantity</div>
+                        <input type="text" class="priceQty" id="txtQty4">
+                    </div>
+                    <div id="tradeButton4" class="secHalf" style="height: 0px;">
+                        <input id="btnBid4" type="button" value="Submit Bid" class="myTradeButton" style="font-size:small;" onclick="submitBid(4)">
+                        <input id="btnAsk4" type="button" value="Submit Ask" class="myTradeButton" style="font-size:small;" onclick="submitAsk(4)">
+                        <input id="btnClrBid4" type="button" value="Clear Bids" class="myTradeButton" style="font-size:small;" onclick="clearBids(4)">
+                        <input id="btnClrAsk4" type="button" value="Clear Asks" class="myTradeButton" style="font-size:small;" onclick="clearAsks(4)">
+                    </div>
+                </div><!-- end of secBottom-->
+            </div>
+            <button class="accordion">Order Books</button>
+            <div class="panel">
+                <div id="secBottomBook4" style="display:block; height:100px;width:100%;overflow:hidden;">
+                    <div class="secHalf">
+                        <table id="bidBook4" class="htnl_tbl">
+                            <thead>
+                                <tr><td>Bid</td><td>BidQ</td></tr>
+                            </thead>
+                            <tbody><tr><td>86.15</td><td>100</td></tr><tr><td>86.12</td><td>270</td></tr><tr><td>86.12</td><td>800</td></tr><tr><td>86.01</td><td>10</td></tr><tr><td>86.01</td><td>10</td></tr><tr><td>86.00</td><td>14875</td></tr></tbody>
+                        </table>
+                    </div>
+                    <div class="secHalf">
+                        <table id="askBook4" class="htnl_tbl">
+                            <thead><tr><td>Ask</td><td>AskQ</td></tr></thead>
+                            <tbody><tr><td>86.24</td><td>8999</td></tr><tr><td>86.25</td><td>1930</td></tr><tr><td>86.30</td><td>20</td></tr><tr><td>86.30</td><td>9999</td></tr><tr><td>86.30</td><td>9999</td></tr><tr><td>86.30</td><td>9999</td></tr><tr><td>86.30</td><td>9999</td></tr><tr><td>86.30</td><td>9999</td></tr><tr><td>86.30</td><td>9999</td></tr></tbody>
+                        </table>
+                    </div>
+                </div><!-- end of secBottomBook-->
+
+            </div>
+            <button class="accordion">Chart</button>
+            <div class="panel">
+                <div id="chart_div4" style="width: 100%; height: 100px;"><div style="position: relative;"><div style="position: relative; width: 400px; height: 95px;" dir="ltr"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;" aria-label="A chart."><svg width="400" height="95" style="overflow: hidden;" aria-label="A chart."><defs id="_ABSTRACT_RENDERER_ID_58"><clipPath id="_ABSTRACT_RENDERER_ID_59"><rect x="20" y="5" width="320" height="76"></rect></clipPath></defs><g><rect x="20" y="5" width="320" height="76" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(http://ftswebtrader.com/#_ABSTRACT_RENDERER_ID_59)"><g><rect x="20" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="153" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="286" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="86" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="219" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="352" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="20" y="80" width="320" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="20" y="5" width="320" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="20" y="43" width="320" height="1" stroke="none" stroke-width="0" fill="#ebebeb"></rect></g><g><rect x="20" y="5" width="1" height="76" stroke="none" stroke-width="0" fill="#333333"></rect></g><g><path d="M164.04999999999998,62.5C164.04999999999998,62.5,165.37916666666666,62.5,165.37916666666666,62.5C165.37916666666666,62.5,165.37916666666666,62.5,165.37916666666666,62.5C165.37916666666666,62.5,166.70833333333331,62.5,166.70833333333331,62.5C166.70833333333331,62.5,166.70833333333331,62.5,166.70833333333331,62.5C166.70833333333331,62.5,166.70833333333331,62.5,166.70833333333331,62.5C166.70833333333331,62.5,166.70833333333331,62.5,166.70833333333331,62.5C166.70833333333331,62.5,166.70833333333331,62.5,166.70833333333331,62.5C166.70833333333331,62.5,167.59444444448874,62.5,168.0375,62.5C168.48055555551124,62.5,169.36666666666667,62.5,169.36666666666667,62.5C169.36666666666667,62.5,169.36666666666667,62.5,169.36666666666667,62.5C169.36666666666667,62.5,169.36666666666667,62.5,169.36666666666667,62.5C169.36666666666667,62.5,169.36666666666667,62.5,169.36666666666667,62.5C169.36666666666667,62.5,170.25277777782208,62.5,170.69583333333333,62.5C171.13888888884458,62.5,171.58194444448873,62.5,172.025,62.5C172.46805555551126,62.5,173.35416666666666,62.5,173.35416666666666,62.5C173.35416666666666,62.5,173.35416666666666,62.5,173.35416666666666,62.5C173.35416666666666,62.5,173.35416666666666,47.5,173.35416666666666,47.5C173.35416666666666,47.5,173.35416666666666,47.5,173.35416666666666,47.5C173.35416666666666,47.5,174.24027777782206,47.5,174.68333333333334,47.5C175.1263888888446,47.5,176.89861111115542,47.5,177.34166666666667,47.5C177.78472222217792,47.5,178.67083333333332,47.5,178.67083333333332,47.5C178.67083333333332,47.5,178.67083333333332,47.5,178.67083333333332,47.5C178.67083333333332,47.5,180,47.5,180,47.5C180,47.5,180,47.5,180,47.5C180,47.5,182.21527777782208,47.5,182.65833333333333,47.5C183.10138888884458,47.5,183.98749999999998,47.5,183.98749999999998,47.5C183.98749999999998,47.5,183.98749999999998,47.5,183.98749999999998,47.5C183.98749999999998,47.5,183.98749999999998,47.5,183.98749999999998,47.5C183.98749999999998,47.5,183.98749999999998,47.5,183.98749999999998,47.5C183.98749999999998,47.5,186.64583333333331,47.5,186.64583333333331,47.5C186.64583333333331,47.5,186.64583333333331,47.5,186.64583333333331,47.5C186.64583333333331,47.5,187.975,44.99999999949978,187.975,47.5C187.975,50.00000000050022,187.975,62.5,187.975,62.5C187.975,62.5,187.975,62.5,187.975,62.5C187.975,62.5,189.30416666666665,52,189.30416666666665,52C189.30416666666665,52,189.30416666666665,52,189.30416666666665,52C189.30416666666665,52,190.63333333333333,52,190.63333333333333,52C190.63333333333333,52,190.63333333333333,52,190.63333333333333,52C190.63333333333333,52,190.63333333333333,52,190.63333333333333,52C190.63333333333333,52,191.9625,52,191.9625,52C191.9625,52,191.9625,52,191.9625,52C191.9625,52,191.9625,52,191.9625,52C191.9625,52,191.9625,52,191.9625,52C191.9625,52,193.29166666666666,52,193.29166666666666,52C193.29166666666666,52,193.29166666666666,52,193.29166666666666,52C193.29166666666666,52,193.29166666666666,52,193.29166666666666,52C193.29166666666666,52,193.29166666666666,52,193.29166666666666,52C193.29166666666666,52,194.17777777782206,52,194.62083333333334,52C195.0638888888446,52,195.95,52,195.95,52C195.95,52,195.95,52,195.95,52C195.95,52,195.95,52,195.95,52C195.95,52,195.95,52,195.95,52C195.95,52,197.27916666666667,52,197.27916666666667,52C197.27916666666667,52,197.27916666666667,52,197.27916666666667,52C197.27916666666667,52,197.27916666666667,52,197.27916666666667,52C197.27916666666667,52,198.60833333333332,52,198.60833333333332,52C198.60833333333332,52,198.60833333333332,52,198.60833333333332,52C198.60833333333332,52,198.60833333333332,52,198.60833333333332,52C198.60833333333332,52,198.60833333333332,52,198.60833333333332,52C198.60833333333332,52,199.9375,52,199.9375,52C199.9375,52,199.9375,52,199.9375,52" stroke="#ff0000" stroke-width="2" fill-opacity="1" fill="none"></path><path d="M164.04999999999998,43C164.04999999999998,43,165.37916666666666,43,165.37916666666666,43C165.37916666666666,43,165.37916666666666,43,165.37916666666666,43C165.37916666666666,43,166.70833333333331,43,166.70833333333331,43C166.70833333333331,43,166.70833333333331,43,166.70833333333331,43C166.70833333333331,43,166.70833333333331,58,166.70833333333331,58C166.70833333333331,58,166.70833333333331,58,166.70833333333331,58C166.70833333333331,58,166.70833333333331,58,166.70833333333331,58C166.70833333333331,58,167.59444444448874,45.50000000050022,168.0375,43C168.48055555551124,40.49999999949978,169.36666666666667,40.49999999949978,169.36666666666667,43C169.36666666666667,45.50000000050022,169.36666666666667,58,169.36666666666667,58C169.36666666666667,58,169.36666666666667,58,169.36666666666667,58C169.36666666666667,58,169.36666666666667,58,169.36666666666667,58C169.36666666666667,58,170.25277777782208,58,170.69583333333333,58C171.13888888884458,58,171.58194444448873,58,172.025,58C172.46805555551126,58,173.35416666666666,61.75,173.35416666666666,58C173.35416666666666,54.25,173.35416666666666,35.5,173.35416666666666,35.5C173.35416666666666,35.5,173.35416666666666,35.5,173.35416666666666,35.5C173.35416666666666,35.5,173.35416666666666,35.5,173.35416666666666,35.5C173.35416666666666,35.5,174.24027777782206,35.5,174.68333333333334,35.5C175.1263888888446,35.5,176.89861111115542,32.99999999949978,177.34166666666667,35.5C177.78472222217792,38.0000000004984,178.67083333333332,50.5,178.67083333333332,50.5C178.67083333333332,50.5,178.67083333333332,50.5,178.67083333333332,50.5C178.67083333333332,50.5,180,50.5,180,50.5C180,50.5,180,50.5,180,50.5C180,50.5,182.21527777782208,50.5,182.65833333333333,50.5C183.10138888884458,50.5,183.98749999999998,50.5,183.98749999999998,50.5C183.98749999999998,50.5,183.98749999999998,50.5,183.98749999999998,50.5C183.98749999999998,50.5,183.98749999999998,50.5,183.98749999999998,50.5C183.98749999999998,50.5,183.98749999999998,50.5,183.98749999999998,50.5C183.98749999999998,50.5,186.64583333333331,50.5,186.64583333333331,50.5C186.64583333333331,50.5,186.64583333333331,50.5,186.64583333333331,50.5C186.64583333333331,50.5,187.975,50.5,187.975,50.5C187.975,50.5,187.975,50.5,187.975,50.5C187.975,50.5,187.975,50.5,187.975,50.5C187.975,50.5,189.30416666666665,51.74999999949978,189.30416666666665,50.5C189.30416666666665,49.25000000050022,189.30416666666665,44.24999999949978,189.30416666666665,43C189.30416666666665,41.75000000050022,190.63333333333333,43,190.63333333333333,43C190.63333333333333,43,190.63333333333333,43,190.63333333333333,43C190.63333333333333,43,190.63333333333333,43,190.63333333333333,43C190.63333333333333,43,191.9625,43,191.9625,43C191.9625,43,191.9625,43,191.9625,43C191.9625,43,191.9625,43,191.9625,43C191.9625,43,191.9625,43,191.9625,43C191.9625,43,193.29166666666666,43,193.29166666666666,43C193.29166666666666,43,193.29166666666666,43,193.29166666666666,43C193.29166666666666,43,193.29166666666666,43,193.29166666666666,43C193.29166666666666,43,193.29166666666666,43,193.29166666666666,43C193.29166666666666,43,194.17777777782206,43,194.62083333333334,43C195.0638888888446,43,195.95,43,195.95,43C195.95,43,195.95,43,195.95,43C195.95,43,195.95,43,195.95,43C195.95,43,195.95,43,195.95,43C195.95,43,197.27916666666667,43,197.27916666666667,43C197.27916666666667,43,197.27916666666667,43,197.27916666666667,43C197.27916666666667,43,197.27916666666667,43,197.27916666666667,43C197.27916666666667,43,198.60833333333332,58,198.60833333333332,58C198.60833333333332,58,198.60833333333332,58,198.60833333333332,58C198.60833333333332,58,198.60833333333332,58,198.60833333333332,58C198.60833333333332,58,198.60833333333332,58,198.60833333333332,58C198.60833333333332,58,199.9375,58,199.9375,58C199.9375,58,199.9375,58,199.9375,58" stroke="#00ffff" stroke-width="2" fill-opacity="1" fill="none"></path><path d="M164.04999999999998,50.5C164.04999999999998,50.5,165.37916666666666,43,165.37916666666666,43C165.37916666666666,43,165.37916666666666,43,165.37916666666666,43C165.37916666666666,43,166.70833333333331,62.5,166.70833333333331,62.5C166.70833333333331,62.5,166.70833333333331,62.5,166.70833333333331,62.5C166.70833333333331,62.5,166.70833333333331,62.5,166.70833333333331,62.5C166.70833333333331,62.5,166.70833333333331,58,166.70833333333331,58C166.70833333333331,58,166.70833333333331,45.50000000050022,166.70833333333331,43C166.70833333333331,40.49999999949978,167.59444444448874,43,168.0375,43C168.48055555551124,43,169.36666666666667,43,169.36666666666667,43C169.36666666666667,43,169.36666666666667,43,169.36666666666667,43C169.36666666666667,43,169.36666666666667,43,169.36666666666667,43C169.36666666666667,43,169.36666666666667,43,169.36666666666667,43C169.36666666666667,43,170.25277777782208,56.7500000004984,170.69583333333333,58C171.13888888884458,59.24999999949978,171.58194444448873,54.25,172.025,50.5C172.46805555551126,46.75,173.35416666666666,35.5,173.35416666666666,35.5C173.35416666666666,35.5,173.35416666666666,35.5,173.35416666666666,35.5C173.35416666666666,35.5,173.35416666666666,35.5,173.35416666666666,35.5C173.35416666666666,35.5,173.35416666666666,29.249999999501597,173.35416666666666,28C173.35416666666666,26.750000000500222,174.24027777782206,44.24999999949978,174.68333333333334,47.5C175.1263888888446,50.75000000050022,176.89861111115542,47.5,177.34166666666667,47.5C177.78472222217792,47.5,178.67083333333332,47.5,178.67083333333332,47.5C178.67083333333332,47.5,178.67083333333332,47.5,178.67083333333332,47.5C178.67083333333332,47.5,180,62.5,180,62.5C180,62.5,180,62.5,180,62.5C180,62.5,182.21527777782208,65.00000000050022,182.65833333333333,62.5C183.10138888884458,59.99999999949978,183.98749999999998,47.5,183.98749999999998,47.5C183.98749999999998,47.5,183.98749999999998,47.5,183.98749999999998,47.5C183.98749999999998,47.5,183.98749999999998,47.5,183.98749999999998,47.5C183.98749999999998,47.5,183.98749999999998,47.5,183.98749999999998,47.5C183.98749999999998,47.5,186.64583333333331,48.50000000050022,186.64583333333331,50.5C186.64583333333331,52.49999999949978,186.64583333333331,60.50000000050022,186.64583333333331,62.5C186.64583333333331,64.4999999995016,187.975,64.4999999995016,187.975,62.5C187.975,60.50000000050022,187.975,50.5,187.975,50.5C187.975,50.5,187.975,50.5,187.975,50.5C187.975,50.5,189.30416666666665,50.5,189.30416666666665,50.5C189.30416666666665,50.5,189.30416666666665,50.5,189.30416666666665,50.5C189.30416666666665,50.5,190.63333333333333,43,190.63333333333333,43C190.63333333333333,43,190.63333333333333,43,190.63333333333333,43C190.63333333333333,43,190.63333333333333,43,190.63333333333333,43C190.63333333333333,43,191.9625,43,191.9625,43C191.9625,43,191.9625,43,191.9625,43C191.9625,43,191.9625,43,191.9625,43C191.9625,43,191.9625,50.5,191.9625,52C191.9625,53.49999999999818,193.29166666666666,53.49999999999818,193.29166666666666,52C193.29166666666666,50.5,193.29166666666666,43,193.29166666666666,43C193.29166666666666,43,193.29166666666666,43,193.29166666666666,43C193.29166666666666,43,193.29166666666666,43,193.29166666666666,43C193.29166666666666,43,194.17777777782206,43,194.62083333333334,43C195.0638888888446,43,195.95,43,195.95,43C195.95,43,195.95,43,195.95,43C195.95,43,195.95,43,195.95,43C195.95,43,195.95,43,195.95,43C195.95,43,197.27916666666667,41.5,197.27916666666667,43C197.27916666666667,44.5,197.27916666666667,52,197.27916666666667,52C197.27916666666667,52,197.27916666666667,52,197.27916666666667,52C197.27916666666667,52,198.60833333333332,52,198.60833333333332,52C198.60833333333332,52,198.60833333333332,52,198.60833333333332,52C198.60833333333332,52,198.60833333333332,62.5,198.60833333333332,62.5C198.60833333333332,62.5,198.60833333333332,62.5,198.60833333333332,62.5C198.60833333333332,62.5,199.9375,58,199.9375,58C199.9375,58,199.9375,58,199.9375,58" stroke="#ffff00" stroke-width="2" fill-opacity="1" fill="none"></path></g></g><g></g><g><g><text text-anchor="middle" x="20.5" y="91.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#ffffff">0</text></g><g><text text-anchor="middle" x="153.4167" y="91.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#ffffff">100</text></g><g><text text-anchor="middle" x="286.3333" y="91.5" font-family="Arial" font-size="10" stroke="none" stroke-width="0" fill="#ffffff">200</text></g></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Time</th><th>Bid</th><th>Ask</th><th>Last</th></tr></thead><tbody><tr><td>108</td><td>86.12</td><td>86.25</td><td>86.2</td></tr><tr><td>109</td><td>86.12</td><td>86.25</td><td>86.25</td></tr><tr><td>109</td><td>86.12</td><td>86.25</td><td>86.25</td></tr><tr><td>110</td><td>86.12</td><td>86.25</td><td>86.12</td></tr><tr><td>110</td><td>86.12</td><td>86.25</td><td>86.12</td></tr><tr><td>110</td><td>86.12</td><td>86.15</td><td>86.12</td></tr><tr><td>110</td><td>86.12</td><td>86.15</td><td>86.15</td></tr><tr><td>110</td><td>86.12</td><td>86.15</td><td>86.25</td></tr><tr><td>111</td><td>86.12</td><td>86.25</td><td>86.25</td></tr><tr><td>112</td><td>86.12</td><td>86.25</td><td>86.25</td></tr><tr><td>112</td><td>86.12</td><td>86.15</td><td>86.25</td></tr><tr><td>112</td><td>86.12</td><td>86.15</td><td>86.25</td></tr><tr><td>112</td><td>86.12</td><td>86.15</td><td>86.25</td></tr><tr><td>113</td><td>86.12</td><td>86.15</td><td>86.15</td></tr><tr><td>114</td><td>86.12</td><td>86.15</td><td>86.2</td></tr><tr><td>115</td><td>86.12</td><td>86.15</td><td>86.3</td></tr><tr><td>115</td><td>86.12</td><td>86.3</td><td>86.3</td></tr><tr><td>115</td><td>86.22</td><td>86.3</td><td>86.3</td></tr><tr><td>115</td><td>86.22</td><td>86.3</td><td>86.35</td></tr><tr><td>116</td><td>86.22</td><td>86.3</td><td>86.22</td></tr><tr><td>118</td><td>86.22</td><td>86.3</td><td>86.22</td></tr><tr><td>119</td><td>86.22</td><td>86.2</td><td>86.22</td></tr><tr><td>119</td><td>86.22</td><td>86.2</td><td>86.22</td></tr><tr><td>120</td><td>86.22</td><td>86.2</td><td>86.12</td></tr><tr><td>120</td><td>86.22</td><td>86.2</td><td>86.12</td></tr><tr><td>122</td><td>86.22</td><td>86.2</td><td>86.12</td></tr><tr><td>123</td><td>86.22</td><td>86.2</td><td>86.22</td></tr><tr><td>123</td><td>86.22</td><td>86.2</td><td>86.22</td></tr><tr><td>123</td><td>86.22</td><td>86.2</td><td>86.22</td></tr><tr><td>123</td><td>86.22</td><td>86.2</td><td>86.22</td></tr><tr><td>125</td><td>86.22</td><td>86.2</td><td>86.2</td></tr><tr><td>125</td><td>86.22</td><td>86.2</td><td>86.12</td></tr><tr><td>126</td><td>86.22</td><td>86.2</td><td>86.12</td></tr><tr><td>126</td><td>86.12</td><td>86.2</td><td>86.2</td></tr><tr><td>126</td><td>86.12</td><td>86.2</td><td>86.2</td></tr><tr><td>127</td><td>86.19</td><td>86.2</td><td>86.2</td></tr><tr><td>127</td><td>86.19</td><td>86.25</td><td>86.2</td></tr><tr><td>128</td><td>86.19</td><td>86.25</td><td>86.25</td></tr><tr><td>128</td><td>86.19</td><td>86.25</td><td>86.25</td></tr><tr><td>128</td><td>86.19</td><td>86.25</td><td>86.25</td></tr><tr><td>129</td><td>86.19</td><td>86.25</td><td>86.25</td></tr><tr><td>129</td><td>86.19</td><td>86.25</td><td>86.25</td></tr><tr><td>129</td><td>86.19</td><td>86.25</td><td>86.25</td></tr><tr><td>129</td><td>86.19</td><td>86.25</td><td>86.19</td></tr><tr><td>130</td><td>86.19</td><td>86.25</td><td>86.19</td></tr><tr><td>130</td><td>86.19</td><td>86.25</td><td>86.25</td></tr><tr><td>130</td><td>86.19</td><td>86.25</td><td>86.25</td></tr><tr><td>130</td><td>86.19</td><td>86.25</td><td>86.25</td></tr><tr><td>131</td><td>86.19</td><td>86.25</td><td>86.25</td></tr><tr><td>132</td><td>86.19</td><td>86.25</td><td>86.25</td></tr><tr><td>132</td><td>86.19</td><td>86.25</td><td>86.25</td></tr><tr><td>132</td><td>86.19</td><td>86.25</td><td>86.25</td></tr><tr><td>132</td><td>86.19</td><td>86.25</td><td>86.25</td></tr><tr><td>133</td><td>86.19</td><td>86.25</td><td>86.25</td></tr><tr><td>133</td><td>86.19</td><td>86.25</td><td>86.19</td></tr><tr><td>133</td><td>86.19</td><td>86.25</td><td>86.19</td></tr><tr><td>134</td><td>86.19</td><td>86.15</td><td>86.19</td></tr><tr><td>134</td><td>86.19</td><td>86.15</td><td>86.19</td></tr><tr><td>134</td><td>86.19</td><td>86.15</td><td>86.12</td></tr><tr><td>134</td><td>86.19</td><td>86.15</td><td>86.12</td></tr><tr><td>135</td><td>86.19</td><td>86.15</td><td>86.15</td></tr><tr><td>135</td><td>86.19</td><td>86.15</td><td>86.15</td></tr></tbody></table></div></div></div><div style="display: none; position: absolute; top: 105px; left: 410px; white-space: nowrap; font-family: Arial; font-size: 10px;" aria-hidden="true">...</div><div></div></div></div>
+            </div>
+        </div><!-- end of secDiv-->
+    </div><!-- end of accordTrd-->
+        </div><!-- end of tab-2-->
+        <div id="tab-3" style="min-width: 800px; clear: left;" aria-labelledby="ui-id-3" role="tabpanel" class="ui-tabs-panel ui-corner-bottom ui-widget-content" aria-hidden="false">
+            <div class="row" style="border: 1px solid;">
+                <!--Montage-->
+                <div class="col-sm-6">
+                    <table id="PositionTable" class="htnl_tbl" style="width:100%;">
+                        <thead><tr><td class="theader">Security</td><td class="theader">Bid</td><td class="theader"></td><td class="theader"></td><td class="theader">Ask</td><td class="theader"></td><td class="theader"></td> <td class="theader">Last</td><td class="theader">Position</td><td class="theader">Payoff</td></tr></thead>
+                        <tbody><tr><td><span class="secQuote" id="mSecName1" onclick="mSnoClicked(1)" <="" span="">Cp Bnd</span></td><td><span id="mBid1" class="secQuote">94.70/10000</span></td><td><span id="mRaiseBid1" class="secQuote"><img src="Trader%2058_files/Arrow2%20Up.ico" class="imgTrade" title="Raise Bid" onclick="mRaiseBid(1)"></span></td><td><span id="mHitBid1" class="secQuote"><img src="Trader%2058_files/Target_Magenta.ico" class="imgTrade" title="Hit Bid" onclick="mHitBid(1)"></span></td><td><span id="mAsk1" class="secQuote">94.95/9360</span></td><td><span id="mLowerAsk1" class="secQuote"><img src="Trader%2058_files/Arrow2%20Down.ico" class="imgTrade" title="Lower Ask" onclick="mLowerAsk(1)"></span></td><td><span id="mHitAsk1" class="secQuote"><img src="Trader%2058_files/Target_blue.ico" class="imgTrade" title="Hit Ask" onclick="mHitAsk(1)"></span></td><td><span id="mLast1" class="secQuote" style="color: rgb(0, 255, 0);">94.95↑</span></td><td><span id="mPosition1" class="secQuote">-400</span></td><td><span id="mPayoff1" class="secQuote">&nbsp;</span></td></tr><tr><td><span class="secQuote" id="mSecName2" onclick="mSnoClicked(2)" <="" span="">Zero 1</span></td><td><span id="mBid2" class="secQuote">&nbsp;</span></td><td><span id="mRaiseBid2" class="secQuote"><img src="Trader%2058_files/Arrow2%20Up.ico" class="imgTrade" title="Raise Bid" onclick="mRaiseBid(2)"></span></td><td><span id="mHitBid2" class="secQuote"><img src="Trader%2058_files/Target_Magenta.ico" class="imgTrade" title="Hit Bid" onclick="mHitBid(2)"></span></td><td><span id="mAsk2" class="secQuote">&nbsp;</span></td><td><span id="mLowerAsk2" class="secQuote"><img src="Trader%2058_files/Arrow2%20Down.ico" class="imgTrade" title="Lower Ask" onclick="mLowerAsk(2)"></span></td><td><span id="mHitAsk2" class="secQuote"><img src="Trader%2058_files/Target_blue.ico" class="imgTrade" title="Hit Ask" onclick="mHitAsk(2)"></span></td><td><span id="mLast2" class="secQuote"></span></td><td><span id="mPosition2" class="secQuote">0</span></td><td><span id="mPayoff2" class="secQuote">&nbsp;</span></td></tr><tr><td><span class="secQuote" id="mSecName3" onclick="mSnoClicked(3)" <="" span="">Zero 2</span></td><td><span id="mBid3" class="secQuote">&nbsp;</span></td><td><span id="mRaiseBid3" class="secQuote"><img src="Trader%2058_files/Arrow2%20Up.ico" class="imgTrade" title="Raise Bid" onclick="mRaiseBid(3)"></span></td><td><span id="mHitBid3" class="secQuote"><img src="Trader%2058_files/Target_Magenta.ico" class="imgTrade" title="Hit Bid" onclick="mHitBid(3)"></span></td><td><span id="mAsk3" class="secQuote">&nbsp;</span></td><td><span id="mLowerAsk3" class="secQuote"><img src="Trader%2058_files/Arrow2%20Down.ico" class="imgTrade" title="Lower Ask" onclick="mLowerAsk(3)"></span></td><td><span id="mHitAsk3" class="secQuote"><img src="Trader%2058_files/Target_blue.ico" class="imgTrade" title="Hit Ask" onclick="mHitAsk(3)"></span></td><td><span id="mLast3" class="secQuote"></span></td><td><span id="mPosition3" class="secQuote">430</span></td><td><span id="mPayoff3" class="secQuote">&nbsp;</span></td></tr><tr><td><span class="secQuote" id="mSecName4" onclick="mSnoClicked(4)" <="" span="">Zero 3</span></td><td><span id="mBid4" class="secQuote">86.15/100</span></td><td><span id="mRaiseBid4" class="secQuote"><img src="Trader%2058_files/Arrow2%20Up.ico" class="imgTrade" title="Raise Bid" onclick="mRaiseBid(4)"></span></td><td><span id="mHitBid4" class="secQuote"><img src="Trader%2058_files/Target_Magenta.ico" class="imgTrade" title="Hit Bid" onclick="mHitBid(4)"></span></td><td><span id="mAsk4" class="secQuote">86.24/8999</span></td><td><span id="mLowerAsk4" class="secQuote"><img src="Trader%2058_files/Arrow2%20Down.ico" class="imgTrade" title="Lower Ask" onclick="mLowerAsk(4)"></span></td><td><span id="mHitAsk4" class="secQuote"><img src="Trader%2058_files/Target_blue.ico" class="imgTrade" title="Hit Ask" onclick="mHitAsk(4)"></span></td><td><span id="mLast4" class="secQuote" style="color: rgb(0, 255, 0);">86.24↑</span></td><td><span id="mPosition4" class="secQuote">0</span></td><td><span id="mPayoff4" class="secQuote">&nbsp;</span></td></tr></tbody>
+                    </table>
+                </div>
+                <div class="col-sm-6" style="text-align:center">
+                    <div id="mSecName" class="inputlabel">Cp Bnd</div>
+                    <div id="mlblInfo" class="labelInfoMsg" style="color:lightyellow;">&nbsp;</div>
+                    <div>
+                        <div id="tradeInput" class="secHalf" style="border:none;">
+                            <div class="priceQtyLabel">Price</div>
+                            <input type="text" class="priceQty" id="mPrice">
+                            <div class="priceQtyLabel">Quantity</div>
+                            <input type="text" class="priceQty" id="mQty">
+                        </div>
+                        <div id="tradeButton" class="secHalf" style="border:none;">
+                            <input id="mbtnBid" type="button" value="Submit Bid" class="myTradeButton" style="font-size:medium;" onclick="mSubmitBid()">
+                            <input id="mbtnAsk" type="button" value="Submit Ask" class="myTradeButton" style="font-size:medium;" onclick="mSubmitAsk()">
+                            <input id="mbtnClrBid" type="button" value="Clear Bids" class="myTradeButton" style="font-size:medium;" onclick="mClearBids()">
+                            <input id="mbtnClrAsk" type="button" value="Clear Asks" class="myTradeButton" style="font-size:medium;" onclick="mClearAsks()">
+                        </div>
+                    </div>
+                </div>
+            </div> <!--End of Montage-->
+            <div class="row" style="border: 1px solid;">
+                <!--Books and Chart-->
+                <div class="col-sm-6">
+                    <div id="secBottomBook" style="display:block; height:150px;width:100%;overflow:hidden;">
+                    <div class="secHalf">
+                        <table id="bidBook1" class="htnl_tbl">
+                            <thead>
+                                <tr><td>Bid</td><td>BidQ</td></tr>
+                            </thead>
+                            <tbody><tr><td>94.70</td><td>10000</td></tr><tr><td>94.68</td><td>2000</td></tr><tr><td>94.60</td><td>100</td></tr><tr><td>94.50</td><td>120</td></tr><tr><td>94.40</td><td>460</td></tr><tr><td>94.40</td><td>200</td></tr><tr><td>94.30</td><td>880</td></tr><tr><td>94.20</td><td>400</td></tr><tr><td>94.10</td><td>2000</td></tr><tr><td>94.00</td><td>19800</td></tr></tbody>
+                        </table>
+                    </div>
+                    <div class="secHalf">
+                        <table id="askBook1" class="htnl_tbl">
+                            <thead><tr><td>Ask</td><td>AskQ</td></tr></thead>
+                            <tbody><tr><td>94.95</td><td>9360</td></tr><tr><td>94.95</td><td>10000</td></tr><tr><td>94.98</td><td>9300</td></tr><tr><td>95.00</td><td>6839</td></tr><tr><td>95.00</td><td>10000</td></tr><tr><td>95.00</td><td>800</td></tr><tr><td>100.00</td><td>10</td></tr><tr><td>100.00</td><td>10</td></tr></tbody>
+                        </table>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-6">
+                    <div id="chart_div" style="height: 100%;"><div style="position: relative;"><div style="position: relative; width: 1238px; height: 200px;" dir="ltr"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;" aria-label="A chart."><svg width="1238" height="200" style="overflow: hidden;" aria-label="A chart."><defs id="_ABSTRACT_RENDERER_ID_56"><clipPath id="_ABSTRACT_RENDERER_ID_57"><rect x="35" y="5" width="929" height="160"></rect></clipPath></defs><g><rect x="35" y="5" width="929" height="160" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(http://ftswebtrader.com/#_ABSTRACT_RENDERER_ID_57)"><g><rect x="35" y="5" width="1" height="160" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="132" y="5" width="1" height="160" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="228" y="5" width="1" height="160" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="325" y="5" width="1" height="160" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="422" y="5" width="1" height="160" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="518" y="5" width="1" height="160" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="615" y="5" width="1" height="160" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="712" y="5" width="1" height="160" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="808" y="5" width="1" height="160" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="905" y="5" width="1" height="160" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="35" y="164" width="929" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="35" y="111" width="929" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="35" y="58" width="929" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="35" y="5" width="929" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="35" y="138" width="929" height="1" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="35" y="85" width="929" height="1" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="35" y="32" width="929" height="1" stroke="none" stroke-width="0" fill="#ebebeb"></rect></g><g><rect x="35" y="5" width="1" height="160" stroke="none" stroke-width="0" fill="#333333"></rect></g><g><path d="M453.1,58.5C453.1,58.5,467.27777777790664,58.5,468.56666666666666,58.5C469.8555555554267,58.5,471.1444444445733,53.20000000000073,472.43333333333334,58.5C473.72222222209336,63.79999999999927,476.3,91.18333333245027,476.3,90.29999999999927C476.3,89.41666666755191,476.3,85,476.3,85C476.3,85,476.3,85,476.3,85C476.3,85,476.3,85,476.3,85C476.3,85,476.3,85,476.3,85C476.3,85,480.1666666666667,85,480.1666666666667,85C480.1666666666667,85,480.1666666666667,85,480.1666666666667,85C480.1666666666667,85,490.4777777779067,85,491.76666666666665,85C493.0555555554267,85,495.6333333333333,85,495.6333333333333,85C495.6333333333333,85,495.6333333333333,85,495.6333333333333,85C495.6333333333333,85,495.6333333333333,85,495.6333333333333,85C495.6333333333333,85,499.5,85,499.5,85C499.5,85,499.5,85,499.5,85C499.5,85,503.3666666666667,85,503.3666666666667,85C503.3666666666667,85,503.3666666666667,85,503.3666666666667,85C503.3666666666667,85,503.3666666666667,85,503.3666666666667,85C503.3666666666667,85,507.23333333333335,85,507.23333333333335,85C507.23333333333335,85,507.23333333333335,85,507.23333333333335,85C507.23333333333335,85,507.23333333333335,85,507.23333333333335,85C507.23333333333335,85,507.23333333333335,85,507.23333333333335,85C507.23333333333335,85,509.81111111124,85,511.1,85C512.38888888876,85,513.6777777779066,85,514.9666666666667,85C516.2555555554267,85,517.5444444445734,85,518.8333333333333,85C520.1222222220933,85,521.41111111124,85,522.7,85C523.98888888876,85,534.3,85,538.1666666666667,85C542.0333333333333,85,548.4777777779067,84.11666666755264,549.7666666666667,85C551.0555555554267,85.883333332451,553.6333333333333,90.29999999999927,553.6333333333333,90.29999999999927C553.6333333333333,90.29999999999927,553.6333333333333,90.29999999999927,553.6333333333333,90.29999999999927C553.6333333333333,90.29999999999927,553.6333333333333,90.29999999999927,553.6333333333333,90.29999999999927C553.6333333333333,90.29999999999927,557.5,85,557.5,85" stroke="#ff0000" stroke-width="2" fill-opacity="1" fill="none"></path><path d="M453.1,63.79999999999927C453.1,63.79999999999927,467.27777777790664,63.79999999999927,468.56666666666666,63.79999999999927C469.8555555554267,63.79999999999927,471.1444444445733,63.79999999999927,472.43333333333334,63.79999999999927C473.72222222209336,63.79999999999927,476.3,63.79999999999927,476.3,63.79999999999927C476.3,63.79999999999927,476.3,63.79999999999927,476.3,63.79999999999927C476.3,63.79999999999927,476.3,63.79999999999927,476.3,63.79999999999927C476.3,63.79999999999927,476.3,63.79999999999927,476.3,63.79999999999927C476.3,63.79999999999927,476.3,63.79999999999927,476.3,63.79999999999927C476.3,63.79999999999927,480.1666666666667,63.79999999999927,480.1666666666667,63.79999999999927C480.1666666666667,63.79999999999927,480.1666666666667,63.79999999999927,480.1666666666667,63.79999999999927C480.1666666666667,63.79999999999927,490.4777777779067,63.79999999999927,491.76666666666665,63.79999999999927C493.0555555554267,63.79999999999927,495.6333333333333,63.79999999999927,495.6333333333333,63.79999999999927C495.6333333333333,63.79999999999927,495.6333333333333,63.79999999999927,495.6333333333333,63.79999999999927C495.6333333333333,63.79999999999927,495.6333333333333,63.79999999999927,495.6333333333333,63.79999999999927C495.6333333333333,63.79999999999927,499.5,63.79999999999927,499.5,63.79999999999927C499.5,63.79999999999927,499.5,63.79999999999927,499.5,63.79999999999927C499.5,63.79999999999927,503.3666666666667,63.79999999999927,503.3666666666667,63.79999999999927C503.3666666666667,63.79999999999927,503.3666666666667,63.79999999999927,503.3666666666667,63.79999999999927C503.3666666666667,63.79999999999927,503.3666666666667,63.79999999999927,503.3666666666667,63.79999999999927C503.3666666666667,63.79999999999927,507.23333333333335,63.79999999999927,507.23333333333335,63.79999999999927C507.23333333333335,63.79999999999927,507.23333333333335,63.79999999999927,507.23333333333335,63.79999999999927C507.23333333333335,63.79999999999927,507.23333333333335,63.79999999999927,507.23333333333335,63.79999999999927C507.23333333333335,63.79999999999927,507.23333333333335,63.79999999999927,507.23333333333335,63.79999999999927C507.23333333333335,63.79999999999927,509.81111111124,63.79999999999927,511.1,63.79999999999927C512.38888888876,63.79999999999927,513.6777777779066,68.21666666755118,514.9666666666667,63.79999999999927C516.2555555554267,59.383333332447364,517.5444444445734,41.71666666754754,518.8333333333333,37.29999999999927C520.1222222220933,32.883333332447364,521.41111111124,37.29999999999927,522.7,37.29999999999927C523.98888888876,37.29999999999927,534.3,37.29999999999927,538.1666666666667,37.29999999999927C542.0333333333333,37.29999999999927,548.4777777779067,37.29999999999927,549.7666666666667,37.29999999999927C551.0555555554267,37.29999999999927,553.6333333333333,37.29999999999927,553.6333333333333,37.29999999999927C553.6333333333333,37.29999999999927,553.6333333333333,37.29999999999927,553.6333333333333,37.29999999999927C553.6333333333333,37.29999999999927,553.6333333333333,37.29999999999927,553.6333333333333,37.29999999999927C553.6333333333333,37.29999999999927,557.5,37.29999999999927,557.5,37.29999999999927" stroke="#00ffff" stroke-width="2" fill-opacity="1" fill="none"></path><path d="M453.1,37.29999999999927C453.1,37.29999999999927,467.27777777790664,37.29999999999927,468.56666666666666,37.29999999999927C469.8555555554267,37.29999999999927,471.1444444445733,37.29999999999927,472.43333333333334,37.29999999999927C473.72222222209336,37.29999999999927,476.3,37.29999999999927,476.3,37.29999999999927C476.3,37.29999999999927,476.3,37.29999999999927,476.3,37.29999999999927C476.3,37.29999999999927,476.3,37.29999999999927,476.3,37.29999999999927C476.3,37.29999999999927,476.3,37.29999999999927,476.3,37.29999999999927C476.3,37.29999999999927,476.3,37.29999999999927,476.3,37.29999999999927C476.3,37.29999999999927,480.1666666666667,85,480.1666666666667,85C480.1666666666667,85,480.1666666666667,85,480.1666666666667,85C480.1666666666667,85,490.4777777779067,85,491.76666666666665,85C493.0555555554267,85,495.6333333333333,85,495.6333333333333,85C495.6333333333333,85,495.6333333333333,85,495.6333333333333,85C495.6333333333333,85,495.6333333333333,67.33333333244809,495.6333333333333,63.79999999999927C495.6333333333333,60.26666666755045,499.5,88.53333333244882,499.5,85C499.5,81.46666666755118,499.5,67.33333333244809,499.5,63.79999999999927C499.5,60.26666666755045,503.3666666666667,85,503.3666666666667,85C503.3666666666667,85,503.3666666666667,85,503.3666666666667,85C503.3666666666667,85,503.3666666666667,85,503.3666666666667,85C503.3666666666667,85,507.23333333333335,63.79999999999927,507.23333333333335,63.79999999999927C507.23333333333335,63.79999999999927,507.23333333333335,63.79999999999927,507.23333333333335,63.79999999999927C507.23333333333335,63.79999999999927,507.23333333333335,63.79999999999927,507.23333333333335,63.79999999999927C507.23333333333335,63.79999999999927,507.23333333333335,81.46666666755118,507.23333333333335,85C507.23333333333335,88.53333333244882,509.81111111124,63.79999999999927,511.1,63.79999999999927C512.38888888876,63.79999999999927,513.6777777779066,81.46666666755118,514.9666666666667,85C516.2555555554267,88.53333333244882,517.5444444445734,85,518.8333333333333,85C520.1222222220933,85,521.41111111124,86.98749999999927,522.7,85C523.98888888876,83.01250000000073,534.3,35.3125,538.1666666666667,37.29999999999927C542.0333333333333,39.287499999998545,548.4777777779067,93.39166666755045,549.7666666666667,85C551.0555555554267,76.60833333244955,553.6333333333333,18.75,553.6333333333333,18.75C553.6333333333333,18.75,553.6333333333333,18.75,553.6333333333333,18.75C553.6333333333333,18.75,553.6333333333333,18.75,553.6333333333333,18.75C553.6333333333333,18.75,557.5,18.75,557.5,18.75" stroke="#ffff00" stroke-width="2" fill-opacity="1" fill="none"></path></g></g><g></g><g><g><text text-anchor="middle" x="35.5" y="185.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#ffffff">0</text></g><g><text text-anchor="middle" x="132.1667" y="185.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#ffffff">25</text></g><g><text text-anchor="middle" x="228.8333" y="185.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#ffffff">50</text></g><g><text text-anchor="middle" x="325.5" y="185.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#ffffff">75</text></g><g><text text-anchor="middle" x="422.1667" y="185.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#ffffff">100</text></g><g><text text-anchor="middle" x="518.8333" y="185.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#ffffff">125</text></g><g><text text-anchor="middle" x="615.5" y="185.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#ffffff">150</text></g><g><text text-anchor="middle" x="712.1667" y="185.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#ffffff">175</text></g><g><text text-anchor="middle" x="808.8333" y="185.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#ffffff">200</text></g><g><text text-anchor="middle" x="905.5" y="185.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#ffffff">225</text></g><g><text text-anchor="end" x="31.5" y="169.4" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#ffffff">94.4</text></g><g><text text-anchor="end" x="31.5" y="116.4" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#ffffff">94.6</text></g><g><text text-anchor="end" x="31.5" y="63.4" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#ffffff">94.8</text></g><g><text text-anchor="end" x="31.5" y="10.4" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#ffffff">95.0</text></g></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Time</th><th>Bid</th><th>Ask</th><th>Last</th></tr></thead><tbody><tr><td>108</td><td>94.8</td><td>94.78</td><td>94.88</td></tr><tr><td>112</td><td>94.8</td><td>94.78</td><td>94.88</td></tr><tr><td>113</td><td>94.8</td><td>94.78</td><td>94.88</td></tr><tr><td>114</td><td>94.68</td><td>94.78</td><td>94.88</td></tr><tr><td>114</td><td>94.7</td><td>94.78</td><td>94.88</td></tr><tr><td>114</td><td>94.7</td><td>94.78</td><td>94.88</td></tr><tr><td>114</td><td>94.7</td><td>94.78</td><td>94.88</td></tr><tr><td>114</td><td>94.7</td><td>94.78</td><td>94.88</td></tr><tr><td>115</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>115</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>118</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>119</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>119</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>119</td><td>94.7</td><td>94.78</td><td>94.78</td></tr><tr><td>120</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>120</td><td>94.7</td><td>94.78</td><td>94.78</td></tr><tr><td>121</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>121</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>121</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>122</td><td>94.7</td><td>94.78</td><td>94.78</td></tr><tr><td>122</td><td>94.7</td><td>94.78</td><td>94.78</td></tr><tr><td>122</td><td>94.7</td><td>94.78</td><td>94.78</td></tr><tr><td>122</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>123</td><td>94.7</td><td>94.78</td><td>94.78</td></tr><tr><td>124</td><td>94.7</td><td>94.78</td><td>94.7</td></tr><tr><td>125</td><td>94.7</td><td>94.88</td><td>94.7</td></tr><tr><td>126</td><td>94.7</td><td>94.88</td><td>94.7</td></tr><tr><td>130</td><td>94.7</td><td>94.88</td><td>94.88</td></tr><tr><td>133</td><td>94.7</td><td>94.88</td><td>94.7</td></tr><tr><td>134</td><td>94.68</td><td>94.88</td><td>94.95</td></tr><tr><td>134</td><td>94.68</td><td>94.88</td><td>94.95</td></tr><tr><td>134</td><td>94.68</td><td>94.88</td><td>94.95</td></tr><tr><td>135</td><td>94.7</td><td>94.88</td><td>94.95</td></tr></tbody></table></div></div></div><div style="display: none; position: absolute; top: 210px; left: 1248px; white-space: nowrap; font-family: Arial; font-size: 14px;" aria-hidden="true">94.4</div><div></div></div></div>
+                </div>
+            </div> <!--End of Books and Chart-->
+        </div> <!-- end of tab-3-->
+    </div> <!--end of myTabs-->
+
+    <div style="visibility:hidden" id="baseString">
+        <div id="secFTS" class="secDiv">
+            <div class="secLabel">
+                <div id="secNameFTS" style="text-align:center;clear:both;font-size:18px;">Security FTS</div>
+            </div>
+            <div class="secHalf">
+                <div class="secQuoteLbl"><span class="secQuoteColor">Bid</span>/<span class="secQtyColor">Qty</span></div>
+                <div id="bestBidFTS" class="secQuote">3278.99</div>
+                <div id="bestBidQtyFTS" class="secQuoteQty">1000</div>
+                <img id="imBidUpFTS" src="Trader%2058_files/Arrow2%20Up.ico" class="imgTrade" title="Raise Bid" onclick="raiseBid(FTS)">
+                <img id="imHitBidFTS" src="Trader%2058_files/Target_Magenta.ico" class="imgTrade" title="Hit Bid" onclick="hitBid(FTS)">
+            </div>
+            <div class="secHalf">
+                <div class="secQuoteLbl"><span class="secQuoteColor">Ask</span>/<span class="secQtyColor">Qty</span></div>
+                <div id="bestAskFTS" class="secQuote">3278.99</div>
+                <div id="bestAskQtyFTS" class="secQuoteQty">10000</div>
+                <img id="imAskDownFTS" src="Trader%2058_files/Arrow2%20Down.ico" class="imgTrade" title="Lower Ask" onclick="lowerAsk(FTS)">
+                <img id="imHitAskFTS" src="Trader%2058_files/Target_blue.ico" class="imgTrade" title="Hit Ask" onclick="hitAsk(FTS)">
+            </div>
+            <div class="secHalf">
+                <div id="lblLastPayoffFTS" class="secQuoteLbl">Last</div>
+                <div id="lastPayoffFTS" class="secQuote">3278.99</div>
+            </div>
+            <div class="secHalf">
+                <div id="lblPositionFTS" class="secQuoteLbl">Position</div>
+                <div id="positionFTS" class="secQuote">700</div>
+            </div>
+            <button class="accordion">Market Order Options</button>
+            <div class="panel">
+                <div class="secThird">
+                    <div class="priceQtyLabel">Quantity</div>
+                    <input type="text" value="10" class="priceQty" id="txtQtyMktFTS">
+                </div>
+                <div class="secTwoThirds">
+                    <form>
+                        <input type="radio" id="rdTakeAllFTS" name="mktQtyFTS" style="vertical-align:middle; text-align:left;">
+                        <label for="rdTakeAllFTS" class="priceQtyLabel">Trade All</label><br>
+                        <input type="radio" id="rdTakeQtyFTS" checked="checked" name="mktQtyFTS" style="vertical-align:middle; text-align:left;">
+                        <label for="rdTakeQtyFTS" class="priceQtyLabel">Trade Quantity</label>
+                    </form>
+                </div>
+            </div>
+            <button class="accordion">Information, Limit Orders</button>
+            <div class="panel">
+                <div id="secBottomFTS">
+                    <!--class='divHidden'>-->
+                    <div id="lblInfoFTS" class="labelInfoMsg">
+                        This is a lot of information about security FTS.
+  In fact, we should be able to put in as much information as we want 
+and it should size properly.
+                    </div>
+                    <div id="tradeInputFTS" class="secHalf">
+                        <div class="priceQtyLabel">Price</div>
+                        <input type="text" class="priceQty" id="txtPriceFTS">
+                        <div class="priceQtyLabel">Quantity</div>
+                        <input type="text" class="priceQty" id="txtQtyFTS">
+                    </div>
+                    <div id="tradeButtonFTS" class="secHalf">
+                        <input id="btnBidFTS" type="button" value="Submit Bid" class="myTradeButton" style="font-size:small;" onclick="submitBid(FTS)">
+                        <input id="btnAskFTS" type="button" value="Submit Ask" class="myTradeButton" style="font-size:small;" onclick="submitAsk(FTS)">
+                        <input id="btnClrBidFTS" type="button" value="Clear Bids" class="myTradeButton" style="font-size:small;" onclick="clearBids(FTS)">
+                        <input id="btnClrAskFTS" type="button" value="Clear Asks" class="myTradeButton" style="font-size:small;" onclick="clearAsks(FTS)">
+                    </div>
+                </div><!-- end of secBottom-->
+            </div>
+            <button class="accordion">Order Books</button>
+            <div class="panel">
+                <div id="secBottomBookFTS" style="display:block; height:100px;width:100%;overflow:hidden;">
+                    <div class="secHalf">
+                        <table id="bidBookFTS" class="htnl_tbl">
+                            <thead>
+                                <tr><td>Bid</td><td>BidQ</td></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Bid1</td><td>BidQ</td></tr>
+                                <tr><td>Bid1</td><td>BidQ</td></tr>
+                                <tr><td>Bid1</td><td>BidQ</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="secHalf">
+                        <table id="askBookFTS" class="htnl_tbl">
+                            <thead><tr><td>Ask</td><td>AskQ</td></tr></thead>
+                            <tbody>
+                                <tr><td>Ask1</td><td>AskQ</td></tr>
+                                <tr><td>Ask1</td><td>AskQ</td></tr>
+                                <tr><td>Ask1</td><td>AskQ</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div><!-- end of secBottomBook-->
+
+            </div>
+            <button class="accordion">Chart</button>
+            <div class="panel">
+                <div id="chart_divFTS" style="width: 100%; height: 100px;"></div>
+            </div>
+        </div><!-- end of secDiv-->
+    </div><!-- end of base string -->
+    <input type="button" class="myButton" id="btnPerformance" value="Show Performance" style="visibility:hidden;" onclick="dialogPerformance()">
+    
+    <input type="button" class="myButton" id="btnSupport" value="Option Support" style="visibility:hidden;" onclick="dialogSupport()">
+    
+    
+
+
+<div style="display: none; position: absolute;" tabindex="-1" role="dialog" class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-draggable ui-resizable" aria-describedby="dlgPerformance" aria-labelledby="ui-id-4"><div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle"><span id="ui-id-4" class="ui-dialog-title">Performance Summary</span><button type="button" class="ui-dialog-titlebar-close"></button></div><div id="dlgPerformance" class="ui-dialog-content ui-widget-content">
+        <table id="tblPerformance" class="htnl_tbl" style="color:white;font-size:small">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div><div style="display: none; position: absolute;" tabindex="-1" role="dialog" class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-draggable ui-resizable" aria-describedby="dlgSupport" aria-labelledby="ui-id-5"><div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle"><span id="ui-id-5" class="ui-dialog-title">Option Support</span><button type="button" class="ui-dialog-titlebar-close"></button></div><div id="dlgSupport" class="ui-dialog-content ui-widget-content">
+        <table id="tblSupport" class="htnl_tbl" style="color:white;font-size:small">
+            <thead>
+                <tr>
+                    <th>Security</th>
+                    <th>Delta</th>
+                    <th>Gamma</th>
+                    <th>Vega</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div><div style="display: none; position: absolute;" tabindex="-1" role="dialog" class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-draggable ui-resizable" aria-describedby="dlgMessaging" aria-labelledby="ui-id-6"><div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle"><span id="ui-id-6" class="ui-dialog-title">Messages</span><button type="button" class="ui-dialog-titlebar-close"></button></div><div id="dlgMessaging" class="ui-dialog-content ui-widget-content">
+        <div id="msg1Label">You have received a private message.  Please accept it to see it, otherwise reject it
+        </div>
+        <input type="button" class="myButton" id="btnMsgYes" value="Accept Message" onclick="dialogAcceptMessage(true)">
+        <input type="button" class="myButton" id="btnMsgNo" value="Reject Message" onclick="dialogAcceptMessage(false)">
+        <div id="msg2Label">
+        </div>
+        <div id="msg3Label">
+        </div>
+    </div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div></body></html>

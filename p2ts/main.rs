@@ -16,7 +16,10 @@ fn main() {
     let outdir = if let Some(dir) = args.next() {
         dir
     } else {
-        die!("must provide output dir and input file(s)")
+        die!(
+            "must provide output dir and input file(s)\n\
+            Usage: pt2s <DIR> [INPUT_FILES]",
+        )
     };
     for fname in args {
         // Read the file contents into memory

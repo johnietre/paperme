@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+  <title>Sims - Market</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/vue@3"></script>
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="app">
+  <div id="top" class="top">
+    <h1 class="center">Sims - Market Edition</h1>
+    <div class="center"><input type="text" name="search" placeholder="Symbol"></div>
+  </div>
+
+  <div id="order-book-view" class="view">
+    <h2>{{order.symbol}}</h2>
+    <div id="bid-ask-tables">
+      <div>
+        <h4>Bid</h4>
+        <table class="bid-ask-table">
+            <th>Price</th>
+            <th>Size</th>
+        </table>
+      </div>
+
+      <div>
+        <h4>Ask</h4>
+        <table class="bid-ask-table">
+          <tr>
+            <th>Price</th>
+            <th>Size</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div id="order-view" class="view">
+    <h2>Symbol</h2>
+    <button @click="changeOrderSide()">{{order.side}}</button>
+  </div>
+</div>
+
+</body>
+
+</html>

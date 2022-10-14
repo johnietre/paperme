@@ -1,0 +1,38 @@
+#app {
+  width: 100%;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+  "top top"
+  "viewa viewb";
+}
+
+#top {
+  text-align: center;
+  grid-area: top;
+}
+
+#order-book-view {
+  grid-area: viewa;
+  display: grid;
+  text-align: center;
+  grid-template-rows: auto auto;
+}
+
+#bid-ask-tables {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#bid-ask-tables div {
+  width: 100%;
+}
+
+.bid-ask-table {
+  width: 100%;
+}
+
+#order-view {
+  grid-area: viewb;
+  text-align: center;
+}

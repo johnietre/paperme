@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+  <title>Sims - Market</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/vue@3"></script>
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="app" class="flex-col">
+  <div id="top-view">
+    <h1>Sims - Market Edition</h1>
+    <div><input type="text" name="search" placeholder="Symbol"></div>
+  </div>
+
+  <div id="symbol-views" class="flex-row">
+    <div id="chart-view">
+      <h2>|Symbol Chart| {{order.symbol}}</h2>
+    </div>
+
+    <div id="order-view-wrapper" class="flex-col">
+      <h2>|Symbol Order| Symbol</h2>
+      <div id="order-view" class="flex-row">
+        <div id="buy-div">
+          <button @click="submitBuy()">Buy</button>
+        </div>
+        <div id="order-details">
+          <label for="symbol">Symbol: </label>
+          <input type="text" name="symbol" placeholder="Symbol">
+          <br>
+          <label for="qty">Quantity: </label>
+          <input type="number" name="qty" min="0" placeholder="Quantity">
+          <br>
+          <label for="limit">Limit: </label>
+          <input type="number" name="limit" min="0" placeholder="Limit">
+          <br>
+        </div>
+        <div id="sell-div">
+          <button @click="submitSell()">Sell</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="bid-ask-views" class="flex-row">
+    <div id="order-book-view" class="flex-col">
+      <h2>|Symbol Books| {{order.symbol}}</h2>
+      <div class="bid-ask-tables">
+        <div>
+          <h4>Bid</h4>
+          <table>
+            <tr>
+              <th>Price</th>
+              <th>Size</th>
+            </tr>
+          </table>
+        </div>
+
+        <div>
+          <h4>Ask</h4>
+          <table>
+            <tr>
+              <th>Price</th>
+              <th>Size</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="market-bid-ask-view" class="flex-col">
+      <h2>|Market Bid-Asks|</h2>
+      <div class="bid-ask-tables">
+        <div>
+          <h4>Bid</h4>
+          <table>
+            <tr>
+              <th>Symbol</th>
+              <th>Price</th>
+              <th>Size</th>
+            </tr>
+          </table>
+        </div>
+
+        <div>
+          <h4>Ask</h4>
+          <table>
+            <tr>
+              <th>Symbol</th>
+              <th>Price</th>
+              <th>Size</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="other-user-views" class="flex-row">
+    <div id="user-positions-view">
+      <h2>|User Positions|</h2>
+    </div>
+
+    <div id="chat-view">
+      <h2>|Chat|</h2>
+    </div>
+  </div>
+
+</div>
+
+</body>
+
+</html>

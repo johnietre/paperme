@@ -1,0 +1,84 @@
+/* Elems */
+
+div {
+  border: 1px solid black;
+}
+
+/* Classes */
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.bid-ask-tables {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.bid-ask-tables div {
+  width: 100%;
+}
+
+.bid-ask-tables div table {
+  width: 100%;
+}
+
+/* IDs */
+
+#app {
+  width: 100%;
+}
+
+#top-view {
+  text-align: center;
+}
+
+#symbol-views div {
+  width: 100%;
+}
+
+#chart-view {
+  text-align: center;
+}
+
+#order-view-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+#order-view {
+  width: 100%;
+  align-items: center;
+}
+
+#bid-ask-views {
+  width: 100%;
+}
+
+#bid-ask-views > div {
+  width: 100%;
+}
+
+#order-book-view {
+  text-align: center;
+}
+
+#market-bid-ask-view {
+  text-align: center;
+}
+
+#other-user-views {
+  width: 100%;
+  text-align: center;
+}
+
+#other-user-views > div {
+  width: 100%;
+}
