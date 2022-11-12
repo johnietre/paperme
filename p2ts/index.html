@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+  <title>Index</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+<div id="app">
+
+  <ul>
+    <li v-for="line in cmds">
+      &gt;&gt;&gt;
+      <input
+        style="border:none;"
+        v-model="line"
+        @keyup.enter="doCmd"
+      >
+    </li>
+  </ul>
+    <input
+      @keyup.enter="doCmd2"
+    >
+    <button
+      @click="console.log('no')"
+      >click</button>
+
+</div>
+
+  <script>
+    const app = {
+      data(){
+        return {
+          cmds: [""],
+        };
+      },
+      methods: {
+        doCmd() {
+          if (ev.key == "Enter") {
+            console.log(cmds[-1]);
+            cmds.push("");
+          }
+        },
+        doCmd2() {
+          console.log("yes");
+        }
+      }
+    };
+    Vue.createApp(app).mount("#app");
+  </script>
+</body>
+
+</html>
