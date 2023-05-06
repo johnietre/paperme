@@ -3,6 +3,9 @@ module paperme
 go 1.18
 
 require (
+	github.com/google/uuid v1.1.2
+	github.com/johnietre/pubsub v0.0.0-20230418072525-91117c5280d6
+	github.com/mattn/go-sqlite3 v1.14.16
 	golang.org/x/net v0.0.0-20220624214902-1bab6f366d9e
 	google.golang.org/grpc v1.47.0
 	google.golang.org/protobuf v1.28.0
