@@ -1,10 +1,12 @@
 package main
 
 import (
+  "flag"
   "log"
   "net/http"
   "sync"
 
+  _ "github.com/johnietre/pubsub"
   webs "golang.org/x/net/websocket"
 )
 
@@ -13,6 +15,9 @@ var (
 )
 
 func main() {
+  flag.StringVar(&addr, "addr", "127.0.0.1:8000", "Address to run on")
+  flag.Parse()
+
   r := http.NewServeMux()
   r.Handle("/ws", webs.Handler(wsHandler))
   log.Fatal(http.ListenAndServe(addr, r))
@@ -219,6 +224,7 @@ func (ob *OrderBook) lockedAddAsk(order Order) Order {
 func (ob *OrderBook) MarketDepth() uint64 {
   ob.mtx.Lock()
   defer ob.mtx.Unlock()
+  return ob.lockedMarketDepth()
 }
 
 func (ob *OrderBook) lockedMarketDepth() uint64 {

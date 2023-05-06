@@ -1,30 +1,41 @@
-class Message {
+interface Message {
   action: string;
+};
 
-  constructor() {
-  }
-  
-  toJSON() {
-    return {
-      action: //
-    };
-  }
+type OrderSide = "buy" | "sell";
+
+interface Order {
+  symbol: string;
+  side: OrderSide;
+  price: number;
+  size: number;
 };
 
 const app = {
   data() {
-    const url = new URL("/ws", document.location.origin); url.protocol = "ws";
+    // Create WebSocket
+    const url = new URL("/ws", document.location.href); url.protocol = "ws";
     const ws = new WebSocket(url);
     ws.onopen = this.openHandler;
     ws.onmessage = this.msgHandler;
     ws.onerror = this.errHandler;
     ws.onclose = this.closeHandler;
+
     return {
+      order: newOrder(),
+      searchSym: "",
+      positions: [],
       ws: ws,
     };
   },
 
   methods: {
+    submitSymSearch() {
+      if (this.searchSym == "")
+        return;
+      this.order.symbol = this.searchSym;
+    },
+
     msgHandler(ev: MessageEvent<any>) {
       console.log("message received");
     },
@@ -43,4 +54,8 @@ const app = {
   },
 };
 
-export app;
+function newOrder(): Order {
+  return { symbol: "", side: "buy", price: 0.0, size: 0 };
+}
+
+export { app };

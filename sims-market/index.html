@@ -6,7 +6,8 @@
   <title>Sims - Market</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://unpkg.com/vue@3"></script>
+  <!-- <script src="https://unpkg.com/vue@3"></script> -->
+  <script type="module" src="./main.js" defer></script>
   <link href="style.css" rel="stylesheet">
 </head>
 
@@ -15,7 +16,15 @@
 <div id="app" class="flex-col">
   <div id="top-view">
     <h1>Sims - Market Edition</h1>
-    <div><input type="text" name="search" placeholder="Symbol"></div>
+    <div>
+      <input
+        @keyup.enter="submitSymSearch"
+        type="text"
+        name="search"
+        placeholder="Symbol"
+        v-model="searchSym">
+      <button @click="submitSymSearch">Search</button>
+    </div>
   </div>
 
   <div id="symbol-views" class="flex-row">
@@ -24,7 +33,7 @@
     </div>
 
     <div id="order-view-wrapper" class="flex-col">
-      <h2>|Symbol Order| Symbol</h2>
+      <h2>|Symbol Order| {{order.symbol}}</h2>
       <div id="order-view" class="flex-row">
         <div id="buy-div">
           <button @click="submitBuy()">Buy</button>
