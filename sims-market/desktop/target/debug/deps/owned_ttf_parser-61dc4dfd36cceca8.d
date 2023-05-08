@@ -1,0 +1,10 @@
+C:\Users\johni\Desktop\Programming\github.com\johnietre\paperme\sims-market\desktop\target\debug\deps\owned_ttf_parser-61dc4dfd36cceca8.rmeta: C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.19.0\src\lib.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.19.0\src\convert.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.19.0\src\owned.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.19.0\src\preparse.rs
+
+C:\Users\johni\Desktop\Programming\github.com\johnietre\paperme\sims-market\desktop\target\debug\deps\libowned_ttf_parser-61dc4dfd36cceca8.rlib: C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.19.0\src\lib.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.19.0\src\convert.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.19.0\src\owned.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.19.0\src\preparse.rs
+
+C:\Users\johni\Desktop\Programming\github.com\johnietre\paperme\sims-market\desktop\target\debug\deps\owned_ttf_parser-61dc4dfd36cceca8.d: C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.19.0\src\lib.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.19.0\src\convert.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.19.0\src\owned.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.19.0\src\preparse.rs
+
+C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.19.0\src\lib.rs:
+C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.19.0\src\convert.rs:
+C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.19.0\src\owned.rs:
+C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.19.0\src\preparse.rs:

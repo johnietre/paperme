@@ -1,0 +1,11 @@
+C:\Users\johni\Desktop\Programming\github.com\johnietre\paperme\sims-market\desktop\target\debug\deps\ecolor-8cea7762ddcff8be.rmeta: C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.21.0\src\lib.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.21.0\src\color32.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.21.0\src\hsva_gamma.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.21.0\src\hsva.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.21.0\src\rgba.rs
+
+C:\Users\johni\Desktop\Programming\github.com\johnietre\paperme\sims-market\desktop\target\debug\deps\libecolor-8cea7762ddcff8be.rlib: C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.21.0\src\lib.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.21.0\src\color32.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.21.0\src\hsva_gamma.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.21.0\src\hsva.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.21.0\src\rgba.rs
+
+C:\Users\johni\Desktop\Programming\github.com\johnietre\paperme\sims-market\desktop\target\debug\deps\ecolor-8cea7762ddcff8be.d: C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.21.0\src\lib.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.21.0\src\color32.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.21.0\src\hsva_gamma.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.21.0\src\hsva.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.21.0\src\rgba.rs
+
+C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.21.0\src\lib.rs:
+C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.21.0\src\color32.rs:
+C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.21.0\src\hsva_gamma.rs:
+C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.21.0\src\hsva.rs:
+C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ecolor-0.21.0\src\rgba.rs:

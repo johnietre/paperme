@@ -1,0 +1,10 @@
+C:\Users\johni\Desktop\Programming\github.com\johnietre\paperme\sims-market\desktop\target\debug\deps\clipboard_win-7aae8235d43d137b.rmeta: C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\lib.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\formats.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\raw.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\utils.rs
+
+C:\Users\johni\Desktop\Programming\github.com\johnietre\paperme\sims-market\desktop\target\debug\deps\libclipboard_win-7aae8235d43d137b.rlib: C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\lib.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\formats.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\raw.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\utils.rs
+
+C:\Users\johni\Desktop\Programming\github.com\johnietre\paperme\sims-market\desktop\target\debug\deps\clipboard_win-7aae8235d43d137b.d: C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\lib.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\formats.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\raw.rs C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\utils.rs
+
+C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\lib.rs:
+C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\formats.rs:
+C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\raw.rs:
+C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\utils.rs:

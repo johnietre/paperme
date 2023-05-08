@@ -1,0 +1,11 @@
+C:\Users\johni\Desktop\Programming\github.com\johnietre\paperme\sims-market\desktop\target\debug\deps\glutin_wgl_sys-2f999273f72c034b.rmeta: C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\glutin_wgl_sys-0.4.0\src\lib.rs C:\Users\johni\Desktop\Programming\github.com\johnietre\paperme\sims-market\desktop\target\debug\build\glutin_wgl_sys-d62bd622892b4e1f\out/wgl_bindings.rs C:\Users\johni\Desktop\Programming\github.com\johnietre\paperme\sims-market\desktop\target\debug\build\glutin_wgl_sys-d62bd622892b4e1f\out/wgl_extra_bindings.rs
+
+C:\Users\johni\Desktop\Programming\github.com\johnietre\paperme\sims-market\desktop\target\debug\deps\libglutin_wgl_sys-2f999273f72c034b.rlib: C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\glutin_wgl_sys-0.4.0\src\lib.rs C:\Users\johni\Desktop\Programming\github.com\johnietre\paperme\sims-market\desktop\target\debug\build\glutin_wgl_sys-d62bd622892b4e1f\out/wgl_bindings.rs C:\Users\johni\Desktop\Programming\github.com\johnietre\paperme\sims-market\desktop\target\debug\build\glutin_wgl_sys-d62bd622892b4e1f\out/wgl_extra_bindings.rs
+
+C:\Users\johni\Desktop\Programming\github.com\johnietre\paperme\sims-market\desktop\target\debug\deps\glutin_wgl_sys-2f999273f72c034b.d: C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\glutin_wgl_sys-0.4.0\src\lib.rs C:\Users\johni\Desktop\Programming\github.com\johnietre\paperme\sims-market\desktop\target\debug\build\glutin_wgl_sys-d62bd622892b4e1f\out/wgl_bindings.rs C:\Users\johni\Desktop\Programming\github.com\johnietre\paperme\sims-market\desktop\target\debug\build\glutin_wgl_sys-d62bd622892b4e1f\out/wgl_extra_bindings.rs
+
+C:\Users\johni\.cargo\registry\src\index.crates.io-6f17d22bba15001f\glutin_wgl_sys-0.4.0\src\lib.rs:
+C:\Users\johni\Desktop\Programming\github.com\johnietre\paperme\sims-market\desktop\target\debug\build\glutin_wgl_sys-d62bd622892b4e1f\out/wgl_bindings.rs:
+C:\Users\johni\Desktop\Programming\github.com\johnietre\paperme\sims-market\desktop\target\debug\build\glutin_wgl_sys-d62bd622892b4e1f\out/wgl_extra_bindings.rs:
+
+# env-dep:OUT_DIR=C:\\Users\\johni\\Desktop\\Programming\\github.com\\johnietre\\paperme\\sims-market\\desktop\\target\\debug\\build\\glutin_wgl_sys-d62bd622892b4e1f\\out
